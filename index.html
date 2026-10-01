@@ -3,365 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Etiqueta Base: Fuerza a GitHub Pages a resolver todas las rutas perfectamente -->
-    <base href="/FAS_la_Trilogia_PROBADA_EN_COMBATE_/">
-    <title>Fuerza Aérea Sur - Malvinas 1982 | II Escuadrón Aeromóvil M-5 Dagger</title>
-    
-    <!-- Configuración para funcionamiento como Aplicación (PWA) -->
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#090d16">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="FAS Malvinas">
-    <link rel="apple-touch-icon" href="fotografias/caratula_parches.jpg">
-
+    <title>Fuerza Aérea Sur (FAS) - Testimonio de una Trilogía</title>
+    <!-- Librería QRCode.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
     <style>
         :root {
             --bg-dark: #0f172a;
-            --card-bg: #1e293b;
-            --card-border: #334155;
+            --bg-card: #1e293b;
             --accent-gold: #fbbf24;
             --accent-blue: #38bdf8;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
         }
-        * {
-            box-sizing: border-box;
-        }
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
             background-color: var(--bg-dark);
             color: var(--text-main);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
-            color: white;
-            text-align: center;
-            padding: 3rem 1rem 2.5rem 1rem;
-            border-bottom: 4px solid var(--accent-gold);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-        }
-        .header-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .hero-banner {
-            width: 100%;
-            max-width: 700px;
-            margin: 1.5rem auto;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 3px solid var(--accent-gold);
-            box-shadow: 0 12px 35px rgba(0,0,0,0.8);
-            background-color: #000;
-        }
-        .hero-banner a {
-            display: block;
-            text-decoration: none;
-        }
-        .hero-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease;
-        }
-        .hero-banner img:hover {
-            transform: scale(1.02);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-            letter-spacing: 1.5px;
-            color: #ffffff;
-            font-weight: 700;
-        }
-        header h2 {
-            margin: 0.5rem 0 0 0;
-            font-size: 1.2rem;
-            color: var(--accent-gold);
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
-        
-        /* Contenedor Principal en Grid Simétrica */
-        .container {
-            max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        @media (min-width: 900px) {
-            .container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .full-width {
-                grid-column: span 2;
-            }
-        }
-
-        /* Tarjetas Armónicas y Simétricas */
-        .section-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 12px;
-            padding: 2.2rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            min-height: 480px; /* Asegura altura simétrica en pantallas grandes */
+            min-height: 100vh;
         }
-        .section-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
-        }
-        .section-card h2 {
-            margin-top: 0;
-            color: var(--accent-blue);
-            font-size: 1.4rem;
-            border-bottom: 2px solid var(--card-border);
-            padding-bottom: 0.75rem;
-            margin-bottom: 1rem;
-        }
-        .section-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
-            flex-grow: 0;
-        }
-
-        /* Listas de Enlaces Alineadas */
-        .link-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            max-height: 260px;
-            overflow-y: auto;
-            padding-right: 5px;
-        }
-        .link-list::-webkit-scrollbar {
-            width: 6px;
-        }
-        .link-list::-webkit-scrollbar-thumb {
-            background: var(--card-border);
-            border-radius: 4px;
-        }
-        .link-list li {
-            margin-bottom: 0.7rem;
-        }
-        .link-list a {
-            display: block;
-            background: rgba(15, 23, 42, 0.7);
-            color: #e2e8f0;
-            padding: 0.65rem 1rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            border: 1px solid transparent;
-            transition: all 0.2s ease;
-        }
-        .link-list a:hover {
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent-blue);
-            border-color: var(--accent-blue);
-            padding-left: 1.2rem;
-        }
-
-        /* Cajas de Destacados */
-        .highlight-box {
-            background: rgba(251, 191, 36, 0.05);
-            border-left: 4px solid var(--accent-gold);
-            padding: 1rem;
-            border-radius: 0 8px 8px 0;
-            margin-bottom: 1.5rem;
-        }
-        .highlight-box p {
-            color: #fef3c7;
-            margin: 0;
-            font-size: 0.95rem;
-        }
-
-        footer {
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 2px solid var(--accent-gold);
+            padding: 20px;
             text-align: center;
-            padding: 3rem 1rem;
-            background-color: #090d16;
+        }
+        h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            color: var(--text-main);
+            letter-spacing: 1px;
+        }
+        h2 {
+            margin: 5px 0 0 0;
+            font-size: 1rem;
+            color: var(--accent-gold);
+            font-weight: 400;
+        }
+        .main-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .poster-section {
+            display: flex;
+            flex-direction: row;
+            background-color: var(--bg-card);
+            border: 2px solid var(--accent-gold);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        .poster-left {
+            flex: 1;
+            padding: 30px;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid rgba(255,255,255,0.1);
+        }
+        .poster-left img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 8px;
+            border: 2px solid var(--accent-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .poster-right {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .poster-right h3 {
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+        .poster-right h4 {
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+        .poster-right p {
             color: var(--text-muted);
-            margin-top: 5rem;
-            border-top: 1px solid var(--card-border);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            max-width: 400px;
+        }
+        .qr-wrapper {
+            background: #ffffff;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+            border: 2px solid var(--accent-gold);
+            display: inline-block;
+        }
+        .scan-label {
+            color: var(--accent-blue);
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1rem;
+        }
+        .btn-action {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: #0f172a;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+            transition: background 0.2s;
+        }
+        .btn-action:hover {
+            background-color: #f59e0b;
+        }
+        footer {
+            background-color: var(--bg-card);
+            text-align: center;
+            padding: 15px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        @media (max-width: 768px) {
+            .poster-section {
+                flex-direction: column;
+            }
+            .poster-left {
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+            }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="header-content">
-            <h1>Fuerza Aérea Sur (FAS)</h1>
-            <h2>II Escuadrón Aeromóvil M-5 Dagger &bull; Base Aérea Militar San Julián</h2>
-            
-            <!-- Carátula principal con enlace a Google Fotos -->
-            <div class="hero-banner">
-                <a href="https://photos.app.goo.gl/vrxs4UD9rJFDFFSG9" target="_blank" title="Ver carátula y álbum principal en Google Fotos">
-                    <img src="fotografias/caratula_parches.jpg" alt="Testimonio de una trilogía - VGM José Luis Martínez">
-                </a>
-            </div>
-
-            <p style="color: var(--text-muted); margin: 0; font-size: 1.05rem;">Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
-        </div>
+        <h1>Fuerza Aérea Sur (FAS)</h1>
+        <h2>II Escuadrón Aeromóvil M-5 Dagger &bull; Base Aérea Militar San Julián</h2>
     </header>
 
-    <main class="container">
-
-        <!-- 1. Antecedentes de la FAS -->
-        <section class="section-card">
-            <div>
-                <h2>1. Antecedentes de la FAS</h2>
-                <p>Documentación y registros previos sobre la génesis, creación y despliegue inicial de la Fuerza Aérea Sur.</p>
-                <ul class="link-list">
-                    <li><a href="antecedentes_fas/Autonomia_y_Tension_Interfuerzas.pdf" target="_blank">📄 Autonomía y Tensión Interfuerzas (PDF)</a></li>
-                    <li><a href="antecedentes_fas/Biografia_Crespo_y_Fuerza_Aerea_Sur.pdf" target="_blank">📄 Biografía Crespo y Fuerza Aérea Sur (PDF)</a></li>
-                    <li><a href="antecedentes_fas/Dossier_Tactico_FAS_1982.pdf" target="_blank">📄 Dossier Táctico FAS 1982 (PDF)</a></li>
-                    <li><a href="antecedentes_fas/FAA_Declaracion_Crespo_Pagina_4.pdf.pdf" target="_blank">📄 FAA Declaración Crespo (Página 4) (PDF)</a></li>
-                    <li><a href="antecedentes_fas/FAS_Comando_Independiente.pdf" target="_blank">📄 FAS: Comando Independiente (PDF)</a></li>
-                    <li><a href="antecedentes_fas/Fuerza_Aerea_Sur_Dist_Medios.pdf" target="_blank">📄 Fuerza Aérea Sur - Distribución de Medios (PDF)</a></li>
-                    <li><a href="antecedentes_fas/Informe_Analisis_Estrategico.pdf" target="_blank">📄 Informe de Análisis Estratégico (PDF)</a></li>
-                    <li><a href="antecedentes_fas/Informe_Tecnico_Trilogia_Operativa.pdf" target="_blank">📄 Informe Técnico - Trilogía Operativa (PDF)</a></li>
-                    <li><a href="antecedentes_fas/La_Fuerza_A_Sur.pdf" target="_blank">📄 La Fuerza Aérea Sur (PDF)</a></li>
-                </ul>
+    <div class="main-container">
+        <!-- Sección del Afiche Integrado en el Index -->
+        <div class="poster-section">
+            <!-- Lado Izquierdo: Carátula -->
+            <div class="poster-left">
+                <img src="fotografias/caratula_parches.jpg" alt="Testimonio de una trilogía - VGM José Luis Martínez">
+                <div style="margin-top: 15px; font-size: 0.85rem; color: var(--text-muted);">
+                    Memoria, Historia y Legado – Conflicto de Malvinas 1982
+                </div>
             </div>
-        </section>
 
-        <!-- 2. Honor y Gloria -->
-        <section class="section-card">
-            <div>
-                <h2>2. Honor y Gloria</h2>
-                <p>Homenaje permanente a los 649 Héroes Nacionales de la Patria (Ley N.º 24.950).</p>
-                <ul class="link-list">
-                    <li><a href="honor_y_gloria/los_649_heroes_nacionales.pdf" target="_blank">📜 Nómina oficial de los 649 Héroes (PDF)</a></li>
-                    <li><a href="honor_y_gloria/caidos_homenaje.jpg" target="_blank">🖼 Imagen conmemorativa de los caídos</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 3. Fotografías, Emblemas y Legado Histórico -->
-        <section class="section-card">
-            <div>
-                <h2>3. Fotografías, Emblemas y Legado</h2>
-                <p>Archivo visual permanente con registros de operaciones en la BAM San Julián (1982), emblemas y encuentros de veteranos.</p>
+            <!-- Lado Derecho: QR Estable y Acceso -->
+            <div class="poster-right">
+                <h3>PORTAL HISTÓRICO DIGITAL</h3>
+                <h4>Aplicación Oficial &bull; Malvinas 1982</h4>
                 
-                <div class="highlight-box" style="border-left-color: var(--accent-blue); background: rgba(56, 189, 248, 0.05); margin-bottom: 1rem;">
-                    <p style="color: #e0f2fe; font-size: 0.9rem;">Repositorio visual abierto con acceso libre para todo público.</p>
+                <p>Escanea el código QR con tu teléfono celular para acceder al repositorio completo, documentos tácticos, libros y archivo fotográfico oficial.</p>
+                
+                <div class="qr-wrapper">
+                    <div id="qrcode"></div>
                 </div>
-
-                <ul class="link-list" style="max-height: none;">
-                    <li>
-                        <a href="https://photos.app.goo.gl/vrxs4UD9rJFDFFSG9" target="_blank" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); border-color: var(--accent-blue); font-weight: bold; text-align: center; padding: 0.75rem; margin-bottom: 0.5rem;">
-                            📷 II Escuadrón Aeromóvil Dagger - FAS (1982-Presente)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://photos.app.goo.gl/ZPjoa6it9JyhmBgw5" target="_blank" style="background: rgba(15, 23, 42, 0.6); color: #e2e8f0; border: 1px solid var(--card-border); text-align: center; padding: 0.6rem;">
-                            🏅 Mis distinciones y Distintivos
-                        </a>
-                    </li>
-                </ul>
+                
+                <div class="scan-label">📱 ¡Escaneá para instalar la App!</div>
+                
+                <a href="https://dagger1959.github.io/FAS_la_Trilogia_PROBADA_EN_COMBATE_/" class="btn-action" target="_blank">Acceder al Repositorio Web</a>
             </div>
-        </section>
-
-        <!-- 4. Trabajos de Investigación -->
-        <section class="section-card">
-            <div>
-                <h2>4. Trabajos de Investigación</h2>
-                <p>Estudios y análisis especializados sobre la actuación táctica y jurídica del componente en el conflicto.</p>
-                <ul class="link-list">
-                    <li><a href="trabajos_investigacion/Analisis_Juridico_Estatus_Veteranos_FAA.pdf" target="_blank">📚 Análisis Jurídico Estatus Veteranos FAA</a></li>
-                    <li><a href="trabajos_investigacion/FAS_Todos_Fuimos_Uno.pdf" target="_blank">📚 FAS: Todos Fuimos Uno</a></li>
-                    <li><a href="trabajos_investigacion/heroes_cielo_y_tierra_fas.pdf" target="_blank">📚 Cuadernillo Secundario FAS</a></li>
-                    <li><a href="trabajos_investigacion/Ley_23118_y_Resoluciones_FAA.pdf" target="_blank">📚 Ley 23.118 y Resoluciones FAA</a></li>
-                    <li><a href="trabajos_investigacion/Analisis_Fallo_Contreras_y_Aporte_Testigo.pdf" target="_blank">📚 Análisis Fallo Contreras y Testigo</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 5. Mi Libro (Ocupa ancho completo por ser la obra central) -->
-        <section class="section-card full-width" style="background: linear-gradient(145deg, #1e293b, #111827); border-color: var(--accent-gold); min-height: auto;">
-            <div>
-                <h2 style="color: var(--accent-gold);">5. Mi Libro: Testimonio de una Trilogía</h2>
-                <p>Documentación profunda de la operatividad del personal de tierra junto a las aeronaves y pilotos en 1982.</p>
-                <div class="highlight-box">
-                    <p>Obra editada por la Escuela Superior de Guerra Aérea que relata el esfuerzo humano y técnico detrás de cada misión.</p>
-                </div>
-                <ul class="link-list" style="max-height: none;">
-                    <li><a href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank" style="background: rgba(251, 191, 36, 0.1); color: var(--accent-gold); border-color: var(--accent-gold); font-weight: bold; text-align: center; padding: 0.9rem;">📖 Leer libro completo en formato PDF (Edición Oficial)</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 6. Videos -->
-        <section class="section-card">
-            <div>
-                <h2>6. Videos</h2>
-                <p>Material audiovisual histórico y documental de la Fuerza Aérea Sur.</p>
-                <ul class="link-list">
-                    <li><a href="https://youtu.be/BXe2FHhZVug" target="_blank">🎬 Diapositivas Base San Julián 1982 (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/6HkipfP_HaI" target="_blank">🎬 Reportaje Círculo Personal Civil (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/mSVf-R-yF7Q" target="_blank">🎬 La Trilogía (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/3nFEBN_X_cc" target="_blank">🎬 Audio Análisis Fuerza Aérea Sur 1982 (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/ad0rOnO_lNU" target="_blank">🎬 Video Chicos (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/HI6wUWwzvJg" target="_blank">🎬 La Trilogía Operativa para Chicos (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/GIIpj5ACPLQ" target="_blank">🎬 La Verdad Incómoda (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/bY2Y_nHuELk" target="_blank">🎬 Reportaje JLM (Ver en YouTube)</a></li>
-                    <li><a href="https://youtu.be/n_0dnGBC1DM" target="_blank">🎬 San Julián 2022 (Ver en YouTube)</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 7. Dossier Chicos -->
-        <section class="section-card">
-            <div>
-                <h2>7. Dossier Chicos</h2>
-                <p>Material didáctico y educativo especialmente diseñado para que las nuevas generaciones conozcan la historia.</p>
-                <ul class="link-list">
-                    <li><a href="dossier_chicos/diapositivas_malvinas.pdf" target="_blank">🎒 Diapositivas Malvinas (PDF)</a></li>
-                    <li><a href="dossier_chicos/gesta_malvinas_aulas.pdf" target="_blank">🎒 La Gesta de Malvinas en las Aulas (PDF)</a></li>
-                    <li><a href="dossier_chicos/ilustracion_para_chicos.pdf" target="_blank">🎒 Ilustración para Chicos (PDF)</a></li>
-                    <li><a href="dossier_chicos/malvinas_dagger_trilogia.pdf" target="_blank">🎒 Malvinas Dagger Trilogía (PDF)</a></li>
-                    <li><a href="https://photos.app.goo.gl/vrxs4UD9rJFDFFSG9" target="_blank">🎒 Malvinas También se Enseña (PDF)</a></li>
-                    <li><a href="dossier_chicos/recopilado_didactico.pdf" target="_blank">🎒 Recopilado Didáctico (PDF)</a></li>
-                    <li><a href="dossier_chicos/trilogia_operativa_chicos.mp4" target="_blank">🎒 La Trilogía Operativa para Chicos (Video)</a></li>
-                    <li><a href="dossier_chicos/video_chicos.mp4" target="_blank">🎒 Video Educativo para Chicos (Video)</a></li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- 8. Contacto y Comunicación (Ocupa ancho completo) -->
-        <section class="section-card full-width" style="background: linear-gradient(145deg, #1e293b, #0f172a); border-color: var(--accent-blue); min-height: auto;">
-            <div>
-                <h2 style="color: var(--accent-blue);">📬 Contacto y Comunicación</h2>
-                <p>Para consultas, aportes históricos, instituciones educativas o comunicación directa con la administración del sitio:</p>
-                <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
-                    <a href="mailto:fas.malvinas1982@gmail.com" style="display: block; background: rgba(56, 189, 248, 0.1); color: var(--accent-blue); border: 1px solid var(--accent-blue); padding: 0.8rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; text-align: center; transition: all 0.2s ease;">
-                        ✉️ Correo Oficial FAS: fas.malvinas1982@gmail.com
-                    </a>
-                    <a href="mailto:dagger1959@gmail.com" style="display: block; background: rgba(251, 191, 36, 0.1); color: var(--accent-gold); border: 1px solid var(--accent-gold); padding: 0.8rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; text-align: center; transition: all 0.2s ease;">
-                        ✉️ Correo Personal / Técnico: dagger1959@gmail.com
-                    </a>
-                </div>
-            </div>
-        </section>
-
-    </main>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 1982 - 2026 Fuerza Aérea Sur | Homenaje Permanente a los Veteranos y Caídos en Malvinas.</p>
+        Autor: VGM José Luis Martínez Eyheramendi &bull; Administración: fas.malvinas1982@gmail.com
     </footer>
 
+    <script>
+        // Generador de QR Estable de Alta Calidad
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "https://dagger1959.github.io/FAS_la_Trilogia_PROBADA_EN_COMBATE_/",
+            width: 180,
+            height: 180,
+            colorDark: "#0f172a",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
 </body>
 </html>
