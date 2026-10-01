@@ -6,74 +6,145 @@
     <title>Fuerza Aérea Sur - Malvinas 1982 | Historia y Legado</title>
     <style>
         :root {
-            --primary-color: #1b2a4a;
-            --accent-color: #3b5998;
-            --bg-color: #f4f6f9;
-            --text-color: #333;
-            --card-bg: #ffffff;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --accent-gold: #fbbf24;
+            --accent-blue: #38bdf8;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+        }
+        * {
+            box-sizing: border-box;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
         header {
-            background-color: var(--primary-color);
+            background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
             color: white;
             text-align: center;
-            padding: 2.5rem 1rem;
-            border-bottom: 4px solid var(--accent-color);
+            padding: 3.5rem 1rem;
+            border-bottom: 3px solid var(--accent-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         header h1 {
             margin: 0;
-            font-size: 2.2rem;
-            letter-spacing: 1px;
+            font-size: 2.6rem;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            font-weight: 700;
         }
         header p {
-            margin-top: 0.5rem;
-            font-size: 1.1rem;
-            color: #d1d8e0;
+            margin-top: 0.8rem;
+            font-size: 1.2rem;
+            color: var(--accent-gold);
+            font-weight: 300;
+            letter-spacing: 0.5px;
         }
         .container {
-            max-width: 1000px;
-            margin: 2rem auto;
+            max-width: 1100px;
+            margin: 2.5rem auto;
             padding: 0 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .full-width {
+                grid-column: span 2;
+            }
         }
         .section-card {
             background: var(--card-bg);
-            border-radius: 8px;
-            padding: 1.5rem 2rem;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border-left: 5px solid var(--accent-color);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .section-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-blue);
         }
         .section-card h2 {
             margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.4rem;
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--card-border);
+            padding-bottom: 0.75rem;
+            margin-bottom: 1rem;
         }
-        ul {
-            padding-left: 20px;
+        .section-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
         }
-        li {
-            margin-bottom: 0.5rem;
+        .link-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 250px;
+            overflow-y: auto;
+            padding-right: 5px;
         }
-        a {
-            color: var(--accent-color);
+        .link-list::-webkit-scrollbar {
+            width: 6px;
+        }
+        .link-list::-webkit-scrollbar-thumb {
+            background: var(--card-border);
+            border-radius: 4px;
+        }
+        .link-list li {
+            margin-bottom: 0.6rem;
+        }
+        .link-list a {
+            display: block;
+            background: rgba(15, 23, 42, 0.6);
+            color: #e2e8f0;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
             text-decoration: none;
+            font-size: 0.9rem;
+            border: 1px solid transparent;
+            transition: all 0.2s ease;
         }
-        a:hover {
-            text-decoration: underline;
+        .link-list a:hover {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-blue);
+            border-color: var(--accent-blue);
+            padding-left: 1.25rem;
+        }
+        .highlight-box {
+            background: rgba(251, 191, 36, 0.05);
+            border-left: 4px solid var(--accent-gold);
+            padding: 1rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-box p {
+            color: #fef3c7;
+            margin: 0;
+            font-size: 1rem;
         }
         footer {
             text-align: center;
-            padding: 1.5rem;
-            background-color: var(--primary-color);
-            color: white;
-            margin-top: 3rem;
+            padding: 2.5rem 1rem;
+            background-color: #090d16;
+            color: var(--text-muted);
+            margin-top: 4rem;
+            border-top: 1px solid var(--card-border);
             font-size: 0.9rem;
         }
     </style>
@@ -89,95 +160,111 @@
 
         <!-- 1. Antecedentes de la FAS -->
         <section class="section-card">
-            <h2>1. Antecedentes de la FAS</h2>
-            <p>Documentación y registros previos sobre la génesis, creación y despliegue inicial de la Fuerza Aérea Sur.</p>
-            <ul>
-                <li><a href="antecedentes_fas/Autonomia_y_Tension_Interfuerzas.pdf" target="_blank">Autonomía y Tensión Interfuerzas (PDF)</a></li>
-                <li><a href="antecedentes_fas/Biografia_Crespo_y_Fuerza_Aerea_Sur.pdf" target="_blank">Biografía Crespo y Fuerza Aérea Sur (PDF)</a></li>
-                <li><a href="antecedentes_fas/Dossier_Tactico_FAS_1982.pdf" target="_blank">Dossier Táctico FAS 1982 (PDF)</a></li>
-                <li><a href="antecedentes_fas/FAA_Declaracion_Crespo_Pagina_4.pdf.pdf" target="_blank">FAA Declaración Crespo (Página 4) (PDF)</a></li>
-                <li><a href="antecedentes_fas/FAS_Comando_Independiente.pdf" target="_blank">FAS: Comando Independiente (PDF)</a></li>
-                <li><a href="antecedentes_fas/Fuerza_Aerea_Sur_Dist_Medios.pdf" target="_blank">Fuerza Aérea Sur - Distribución de Medios (PDF)</a></li>
-                <li><a href="antecedentes_fas/Informe_Analisis_Estrategico.pdf" target="_blank">Informe de Análisis Estratégico (PDF)</a></li>
-                <li><a href="antecedentes_fas/Informe_Tecnico_Trilogia_Operativa.pdf" target="_blank">Informe Técnico - Trilogía Operativa (PDF)</a></li>
-                <li><a href="antecedentes_fas/La_Fuerza_Aerea_Sur.pdf" target="_blank">La Fuerza Aérea Sur (PDF)</a></li>
-            </ul>
+            <div>
+                <h2>1. Antecedentes de la FAS</h2>
+                <p>Documentación y registros previos sobre la génesis, creación y despliegue inicial de la Fuerza Aérea Sur.</p>
+                <ul class="link-list">
+                    <li><a href="antecedentes_fas/Autonomia_y_Tension_Interfuerzas.pdf" target="_blank">📄 Autonomía y Tensión Interfuerzas (PDF)</a></li>
+                    <li><a href="antecedentes_fas/Biografia_Crespo_y_Fuerza_Aerea_Sur.pdf" target="_blank">📄 Biografía Crespo y Fuerza Aérea Sur (PDF)</a></li>
+                    <li><a href="antecedentes_fas/Dossier_Tactico_FAS_1982.pdf" target="_blank">📄 Dossier Táctico FAS 1982 (PDF)</a></li>
+                    <li><a href="antecedentes_fas/FAA_Declaracion_Crespo_Pagina_4.pdf.pdf" target="_blank">📄 FAA Declaración Crespo (Página 4) (PDF)</a></li>
+                    <li><a href="antecedentes_fas/FAS_Comando_Independiente.pdf" target="_blank">📄 FAS: Comando Independiente (PDF)</a></li>
+                    <li><a href="antecedentes_fas/Fuerza_Aerea_Sur_Dist_Medios.pdf" target="_blank">📄 Fuerza Aérea Sur - Distribución de Medios (PDF)</a></li>
+                    <li><a href="antecedentes_fas/Informe_Analisis_Estrategico.pdf" target="_blank">📄 Informe de Análisis Estratégico (PDF)</a></li>
+                    <li><a href="antecedentes_fas/Informe_Tecnico_Trilogia_Operativa.pdf" target="_blank">📄 Informe Técnico - Trilogía Operativa (PDF)</a></li>
+                    <li><a href="antecedentes_fas/La_Fuerza_Aerea_Sur.pdf" target="_blank">📄 La Fuerza Aérea Sur (PDF)</a></li>
+                </ul>
+            </div>
         </section>
 
         <!-- 2. Honor y Gloria -->
         <section class="section-card">
-            <h2>2. Honor y Gloria</h2>
-            <p>Homenaje permanente a los 649 Héroes Nacionales (Ley N.º 24.950).</p>
-            <ul>
-                <li><a href="honor_y_gloria/los_649_heroes_nacionales.pdf" target="_blank">Nómina oficial de los 649 Héroes Nacionales (PDF)</a></li>
-                <li><a href="honor_y_gloria/caidos_homenaje.jpg" target="_blank">Imagen conmemorativa de los caídos</a></li>
-            </ul>
+            <div>
+                <h2>2. Honor y Gloria</h2>
+                <p>Homenaje permanente a los 649 Héroes Nacionales (Ley N.º 24.950).</p>
+                <ul class="link-list">
+                    <li><a href="honor_y_gloria/los_649_heroes_nacionales.pdf" target="_blank">📜 Nómina oficial de los 649 Héroes (PDF)</a></li>
+                    <li><a href="honor_y_gloria/caidos_homenaje.jpg" target="_blank">🖼️ Imagen conmemorativa de los caídos</a></li>
+                </ul>
+            </div>
         </section>
 
         <!-- 3. Fotografías -->
         <section class="section-card">
-            <h2>3. Fotografías</h2>
-            <p>Directorio visual optimizado con elementos normalizados (operaciones, bases, personal técnico y material histórico).</p>
-            <p><em>Ejemplos destacados de la galería:</em></p>
-            <ul>
-                <li><a href="fotografias/dagger_5.jpg" target="_blank">Dagger 5 en Base San Julián</a></li>
-                <li><a href="fotografias/los_magos.jpg" target="_blank">Personal Técnico - Los Magos</a></li>
-                <li><a href="fotografias/refugio.jpg" target="_blank">Refugio y Personal</a></li>
-                <li><a href="fotografias/trilogia_accion.jpg" target="_blank">Trilogía en Acción</a></li>
-            </ul>
-            <p><small>Nota: La carpeta completa <code>fotografias/</code> contiene todos los elementos normalizados del repositorio.</small></p>
+            <div>
+                <h2>3. Fotografías</h2>
+                <p>Directorio visual optimizado con elementos normalizados (operaciones, bases y personal técnico).</p>
+                <ul class="link-list">
+                    <li><a href="fotografias/dagger_5.jpg" target="_blank">📷 Dagger 5 en Base San Julián</a></li>
+                    <li><a href="fotografias/los_magos.jpg" target="_blank">📷 Personal Técnico - Los Magos</a></li>
+                    <li><a href="fotografias/refugio.jpg" target="_blank">📷 Refugio y Personal</a></li>
+                    <li><a href="fotografias/trilogia_accion.jpg" target="_blank">📷 Trilogía en Acción</a></li>
+                </ul>
+            </div>
         </section>
 
         <!-- 4. Trabajos de Investigación -->
         <section class="section-card">
-            <h2>4. Trabajos de Investigación</h2>
-            <ul>
-                <li><a href="trabajos_investigacion/Analisis_Juridico_Estatus_Veteranos_FAA.pdf" target="_blank">Análisis Jurídico del Estatus de Veteranos FAA</a></li>
-                <li><a href="trabajos_investigacion/FAS_Todos_Fuimos_Uno.pdf" target="_blank">FAS: Todos Fuimos Uno</a></li>
-                <li><a href="trabajos_investigacion/heroes_cielo_y_tierra_fas.pdf" target="_blank">Héroes del Cielo y de la Tierra - Cuadernillo Secundario FAS</a></li>
-                <li><a href="trabajos_investigacion/Ley_23118_y_Resoluciones_FAA.pdf" target="_blank">Ley 23.118 y Resoluciones FAA</a></li>
-                <li><a href="trabajos_investigacion/Analisis_Fallo_Contreras_y_Aporte_Testigo.pdf" target="_blank">Análisis Fallo Contreras y Aporte Testigo</a></li>
-            </ul>
+            <div>
+                <h2>4. Trabajos de Investigación</h2>
+                <p>Estudios y análisis especializados sobre la actuación táctica y jurídica del componente.</p>
+                <ul class="link-list">
+                    <li><a href="trabajos_investigacion/Analisis_Juridico_Estatus_Veteranos_FAA.pdf" target="_blank">📚 Análisis Jurídico Estatus Veteranos FAA</a></li>
+                    <li><a href="trabajos_investigacion/FAS_Todos_Fuimos_Uno.pdf" target="_blank">📚 FAS: Todos Fuimos Uno</a></li>
+                    <li><a href="trabajos_investigacion/heroes_cielo_y_tierra_fas.pdf" target="_blank">📚 Cuadernillo Secundario FAS</a></li>
+                    <li><a href="trabajos_investigacion/Ley_23118_y_Resoluciones_FAA.pdf" target="_blank">📚 Ley 23.118 y Resoluciones FAA</a></li>
+                    <li><a href="trabajos_investigacion/Analisis_Fallo_Contreras_y_Aporte_Testigo.pdf" target="_blank">📚 Análisis Fallo Contreras y Testigo</a></li>
+                </ul>
+            </div>
         </section>
 
         <!-- 5. Mi Libro -->
-        <section class="section-card">
-            <h2>5. Mi Libro: Testimonio de una Trilogía</h2>
-            <p>Documentación de la operatividad del personal de tierra junto a las aeronaves y pilotos en 1982.</p>
-            <ul>
-                <li><a href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank">Leer libro completo (PDF)</a></li>
-            </ul>
+        <section class="section-card full-width" style="background: linear-gradient(145deg, #1e293b, #111827); border-color: var(--accent-gold);">
+            <div>
+                <h2 style="color: var(--accent-gold);">5. Mi Libro: Testimonio de una Trilogía</h2>
+                <p>Documentación profunda de la operatividad del personal de tierra junto a las aeronaves y pilotos en 1982.</p>
+                <div class="highlight-box">
+                    <p>Obra editada por la Escuela Superior de Guerra Aérea que relata el esfuerzo humano y técnico detrás de cada misión.</p>
+                </div>
+                <ul class="link-list" style="max-height: none;">
+                    <li><a href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank" style="background: rgba(251, 191, 36, 0.1); color: var(--accent-gold); border-color: var(--accent-gold); font-weight: bold; text-align: center;">📖 Leer libro completo en formato PDF (Edición Oficial)</a></li>
+                </ul>
+            </div>
         </section>
 
         <!-- 6. Videos y Audios -->
         <section class="section-card">
-            <h2>6. Videos y Audios</h2>
-            <p>Material audiovisual y sonoro histórico y documental de la Fuerza Aérea Sur.</p>
-            <ul>
-                <li><a href="audio_videos/audio.m4a" target="_blank">Registro de Audio (M4A)</a>[cite: 3]</li>
-                <li><a href="audio_videos/fas_1982.mp4" target="_blank">FAS 1982 (Video MP4)</a>[cite: 3]</li>
-                <li><a href="audio_videos/fas_combate.mp4" target="_blank">FAS Combate (Video MP4)</a>[cite: 3]</li>
-                <li><a href="audio_videos/la_trilogia.mp4" target="_blank">La Trilogía (Video MP4)</a>[cite: 3]</li>
-                <li><a href="audio_videos/la_verdad_incomoda.mp4" target="_blank">La Verdad Incómoda (Video MP4)</a>[cite: 3]</li>
-                <li><a href="audio_videos/reportaje_jlm.mp4" target="_blank">Reportaje JLM (Video MP4)</a>[cite: 3]</li>
-                <li><a href="audio_videos/san_julian_2022.mp4" target="_blank">San Julián 2022 (Video MP4)</a>[cite: 3]</li>
-            </ul>
+            <div>
+                <h2>6. Videos y Audios</h2>
+                <p>Material audiovisual y sonoro histórico y documental de la Fuerza Aérea Sur.</p>
+                <ul class="link-list">
+                    <li><a href="audio_videos/audio.m4a" target="_blank">🎧 Registro de Audio (M4A)</a>[cite: 3]</li>
+                    <li><a href="audio_videos/fas_1982.mp4" target="_blank">🎬 FAS 1982 (Video MP4)</a>[cite: 3]</li>
+                    <li><a href="audio_videos/fas_combate.mp4" target="_blank">🎬 FAS Combate (Video MP4)</a>[cite: 3]</li>
+                    <li><a href="audio_videos/la_trilogia.mp4" target="_blank">🎬 La Trilogía (Video MP4)</a>[cite: 3]</li>
+                    <li><a href="audio_videos/la_verdad_incomoda.mp4" target="_blank">🎬 La Verdad Incómoda (Video MP4)</a>[cite: 3]</li>
+                    <li><a href="audio_videos/reportaje_jlm.mp4" target="_blank">🎬 Reportaje JLM (Video MP4)</a>[cite: 3]</li>
+                    <li><a href="audio_videos/san_julian_2022.mp4" target="_blank">🎬 San Julián 2022 (Video MP4)</a>[cite: 3]</li>
+                </ul>
+            </div>
         </section>
 
         <!-- 7. Dossier Chicos -->
         <section class="section-card">
-            <h2>7. Dossier Chicos</h2>
-            <p>Material didáctico y educativo especialmente diseñado para que las nuevas generaciones conozcan la historia.</p>
-            <ul>
-                <li><a href="dossier_chicos/diapositivas-malvinas.pdf" target="_blank">Diapositivas Malvinas (PDF)</a></li>
-                <li><a href="dossier_chicos/ilustracion_para_chicos_.pdf" target="_blank">Ilustración para Chicos (PDF)</a></li>
-                <li><a href="dossier_chicos/La_Gesta_de_Malvinas_en_las_Aulas.pdf" target="_blank">La Gesta de Malvinas en las Aulas (PDF)</a></li>
-                <li><a href="dossier_chicos/La_Trilogía_Operativa_para_chicos..mp4" target="_blank">La Trilogía Operativa para Chicos (Video MP4)</a></li>
-                <li><a href="dossier_chicos/Malvinas_Dagger_Trilogia.pdf" target="_blank">Malvinas Dagger Trilogía (PDF)</a></li>
-                <li><a href="dossier_chicos/Malvinas_tambien_se_ensena_%281%29.pdf" target="_blank">Malvinas También se Enseña (PDF)</a></li>
-                <li><a href="dossier_chicos/recopilado_para_comprender_como_funcio...pdf" target="_blank">Recopilado para Comprender cómo Funcionaba (PDF)</a></li>
-                <li><a href="dossier_chicos/video_chicos.mp4" target="_blank">Video Educativo para Chicos (Video MP4)</a></li>
-            </ul>
+            <div>
+                <h2>7. Dossier Chicos</h2>
+                <p>Material didáctico y educativo especialmente diseñado para que las nuevas generaciones conozcan la historia.</p>
+                <ul class="link-list">
+                    <li><a href="dossier_chicos/diapositivas-malvinas.pdf" target="_blank">🎒 Diapositivas Malvinas (PDF)</a></li>
+                    <li><a href="dossier_chicos/ilustracion_para_chicos_.pdf" target="_blank">🎒 Ilustración para Chicos (PDF)</a></li>
+                    <li><a href="dossier_chicos/La_Gesta_de_Malvinas_en_las_Aulas.pdf" target="_blank">🎒 La Gesta de Malvinas en las Aulas (PDF)</a></li>
+                    <li><a href="dossier_chicos/La_Trilogía_Operativa_para_chicos..mp4" target="_blank">🎒 La Trilogía Operativa para Chicos (Video)</a></li>
+                    <li><a href="dossier_chicos/Malvinas_Dagger_Trilogia.pdf" target="_blank">🎒 Malvinas Dagger Trilogía (PDF)</a></li>
+                    <li><a href="dossier_chicos/Malvinas_tambien_se_ensena_%281%29.pdf" target="_blank">🎒 Malvinas También se Enseña (PDF)</a></li>
+                    <li><a href="dossier_chicos/recopilado_para_comprender_como_funcio...pdf" target="_blank">🎒 Recopilado Didáctico (PDF)</a></li>
+                    <li><a href="dossier_chicos/video_chicos.mp4" target="_blank">🎒 Video Educativo para Chicos (Video)</a></li>
+                </ul>
+            </div>
         </section>
 
     </main>
