@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Afiche Institucional - FAS Malvinas 1982</title>
+    <!-- Librería QRCode.js embebida vía CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .poster-container {
+            display: flex;
+            flex-direction: row;
+            background-color: #0f172a;
+            width: 100%;
+            max-width: 1200px;
+            padding: 40px;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .left-side {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-banner {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 3px solid #fbbf24;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            margin: 0 auto;
+            background-color: #000;
+        }
+        .hero-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .right-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #ffffff;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+        h2 {
+            font-size: 1.1rem;
+            color: #fbbf24;
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-weight: 400;
+        }
+        p {
+            color: #94a3b8;
+            font-size: 1rem;
+            max-width: 400px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+        .qr-box {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            display: inline-block;
+            border: 3px solid #fbbf24;
+        }
+        .scan-text {
+            color: #38bdf8;
+            font-weight: bold;
+            margin-top: 15px;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+        }
+        .footer-text {
+            margin-top: 25px;
+            font-size: 0.85rem;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-container">
+        <!-- Lado Izquierdo: Tu carátula institucional -->
+        <div class="left-side">
+            <div style="font-size: 1.4rem; font-weight: bold; color: #ffffff; margin-bottom: 15px; letter-spacing: 1px;">
+                Fuerza Aérea Sur (FAS)
+            </div>
+            <div style="font-size: 0.95rem; color: #fbbf24; margin-bottom: 20px;">
+                II Escuadrón Aeromóvil M-5 Dagger &bull; Base Aérea Militar San Julián
+            </div>
+            <div class="hero-banner">
+                <img src="fotografias/caratula_parches.jpg" alt="Testimonio de una trilogía - VGM José Luis Martínez">
+            </div>
+            <div style="margin-top: 15px; font-size: 0.85rem; color: #94a3b8;">
+                Memoria, Historia y Legado – Conflicto de Malvinas 1982
+            </div>
+        </div>
+
+        <!-- Lado Derecho: Código QR y Llamado a la Acción -->
+        <div class="right-side">
+            <h1>PORTAL HISTÓRICO DIGITAL</h1>
+            <h2>Aplicación Oficial &bull; Malvinas 1982</h2>
+            
+            <p>Escanea el código QR con la cámara de tu teléfono celular para acceder al repositorio completo, documentos tácticos, libros y archivo fotográfico oficial.</p>
+            
+            <div class="qr-box">
+                <div id="qrcode"></div>
+            </div>
+            
+            <div class="scan-text">📱 ¡Escaneá para instalar la App en tu celular!</div>
+            
+            <div class="footer-text">
+                Administración: fas.malvinas1982@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "https://dagger1959.github.io/FAS_la_Trilogia_PROBADA_EN_COMBATE_/",
+            width: 220,
+            height: 220,
+            colorDark: "#0f172a",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+    </script>
+</body>
+</html>
