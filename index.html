@@ -3,341 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuerza Aérea Sur - Trilogía Probada en Combate</title>
+    <title>Fuerza Aérea Sur - Malvinas 1982 | Historia y Legado</title>
     <style>
+        :root {
+            --primary-color: #1b2a4a;
+            --accent-color: #3b5998;
+            --bg-color: #f4f6f9;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
         body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
-            padding: 20px;
+            padding: 0;
             line-height: 1.6;
         }
         header {
+            background-color: var(--primary-color);
+            color: white;
             text-align: center;
-            padding: 30px 20px;
-            background: #1f1f1f;
-            border-bottom: 3px solid #0056b3;
-            margin-bottom: 30px;
+            padding: 2.5rem 1rem;
+            border-bottom: 4px solid var(--accent-color);
         }
-        h1 {
-            color: #ffffff;
-            margin-bottom: 10px;
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
         }
-        p.subtitle {
-            color: #b0b0b0;
-            font-size: 1.1em;
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+            color: #d1d8e0;
         }
         .container {
-            max-width: 900px;
-            margin: auto;
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
         .section-card {
-            background: #1e1e1e;
+            background: var(--card-bg);
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-            border-left: 4px solid #0056b3;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 5px solid var(--accent-color);
         }
-        h2 {
-            color: #4dabf7;
-            font-size: 1.4em;
+        .section-card h2 {
             margin-top: 0;
-            border-bottom: 1px solid #333;
-            padding-bottom: 8px;
+            color: var(--primary-color);
+            font-size: 1.4rem;
         }
         ul {
-            list-style-type: none;
-            padding: 0;
+            padding-left: 20px;
         }
-        ul li {
-            padding: 8px 0;
-            border-bottom: 1px solid #2a2a2a;
+        li {
+            margin-bottom: 0.5rem;
         }
-        ul li:last-child {
-            border-bottom: none;
-        }
-        a.file-link {
-            color: #74c0fc;
+        a {
+            color: var(--accent-color);
             text-decoration: none;
-            font-weight: bold;
         }
-        a.file-link:hover {
+        a:hover {
             text-decoration: underline;
-            color: #90b8f8;
-        }
-        .book-box {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            align-items: center;
-            margin-top: 15px;
-        }
-        .book-info {
-            flex: 1;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 4px;
-            margin-top: 10px;
-            background: #000;
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .short-container {
-            position: relative;
-            max-width: 400px;
-            margin: 10px auto;
-            padding-bottom: 177.78%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 4px;
-            background: #000;
-        }
-        .short-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .photo-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .photo-item {
-            background: #252525;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid #333;
-        }
-        .photo-item img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            display: block;
-        }
-        .photo-caption {
-            padding: 10px;
-            font-size: 0.9em;
-            color: #ccc;
-            text-align: center;
-        }
-        .tribute-text {
-            background: #252525;
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 15px;
-            border-left: 3px solid #ffc107;
-            font-size: 0.95em;
         }
         footer {
             text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #777;
-            font-size: 0.9em;
-            border-top: 1px solid #222;
+            padding: 1.5rem;
+            background-color: var(--primary-color);
+            color: white;
+            margin-top: 3rem;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Fuerza Aérea Sur</h1>
-        <p class="subtitle">Trilogía Probada en Combate - Archivos Históricos, Documentales y Educativos</p>
+        <h1>Fuerza Aérea Sur (FAS)</h1>
+        <p>Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
     </header>
 
-    <div class="container">
+    <main class="container">
 
-        <!-- Obra Literaria e Histórica -->
-        <div class="section-card">
-            <h2>Obra Literaria e Histórica</h2>
-            <div class="book-box">
-                <div class="book-info">
-                    <h3 style="color: #ffffff; margin-top: 0;">Testimonio de una Trilogía – Guerra de Malvinas</h3>
-                    <p>Obra editada por la Escuela Superior de Guerra Aérea (ESGA) en conmemoración del 40° Aniversario de la Gesta de Malvinas[cite: 228]. Relata las vivencias del personal técnico y el rol fundamental de la Trilogía Operativa (Avión, Piloto y Personal de Tierra)[cite: 228].</p>
-                    <ul>
-                        <li>📖 <a class="file-link" href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank">Leer / Descargar Libro Completo (PDF)</a></li>
-                        <li>🔗 <a class="file-link" href="https://cefadigital.edu.ar/bitstream/1847939/2445/1/TESTIMONIO%20DE%20UNA%20TRILOG%c3%8dA-%20Guerra%20de%20Malvinas.pdf" target="_blank">Consulta en CEFADIGITAL[cite: 228]</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <!-- 1. Antecedentes de la FAS -->
+        <section class="section-card">
+            <h2>1. Antecedentes de la FAS</h2>
+            <p>Documentación y registros previos sobre la génesis, creación y despliegue inicial de la Fuerza Aérea Sur.</p>
+            <!-- Enlace o contenido de la carpeta antecedentes_fas -->
+            <p><em>Acceso a la documentación:</em> <a href="antecedentes_fas/">Explorar carpeta</a></p>
+        </section>
 
-        <!-- Honor y Gloria -->
-        <div class="section-card">
-            <h2>Honor y Gloria a Nuestros Héroes</h2>
-            <p>Homenaje permanente a los caídos en defensa de la Patria y registros especiales de la memoria histórica[cite: 275].</p>
-            
-            <div class="tribute-text">
-                <p><strong>"Las Malvinas fueron, son y serán argentinas"</strong>[cite: 275].</p>
-                <p>Hablar de Malvinas es hablar de personas. De hombres que tuvieron un nombre, una familia, una historia, sueños y proyectos de vida, y de 649 argentinos que nunca regresaron[cite: 276].</p>
-                <p>El Congreso de la Nación, mediante la <strong>Ley Nacional N.º 24.950</strong> (sancionada el 18 de marzo de 1998), declaró "Héroes nacionales" a los combatientes argentinos fallecidos durante la guerra de Malvinas de 1982[cite: 276]. Su artículo 2.º incorpora la nómina oficial para que sus nombres perduren en la memoria y conciencia histórica de las generaciones venideras[cite: 276].</p>
-                <p style="margin-bottom: 0;"><em>Este espacio no es solamente para recordar; es para conocer sus nombres, sus historias y asegurar que sigan siempre vivos en nuestra memoria[cite: 276, 277].</em></p>
-            </div>
-
-            <ul style="margin-top: 15px;">
-                <li>🎖️ <a class="file-link" href="honor_y_gloria/los_649_heroes_nacionales.pdf" target="_blank">Ver Dossier Completo: Los 649 Héroes Nacionales (PDF)</a>[cite: 275]</li>
-                <li>🔗 <a class="file-link" href="https://www.argentina.gob.ar/normativa/nacional/ley-24950-50278/texto" target="_blank">Texto oficial de la Ley Nacional 24.950 (Argentina.gob.ar)</a>[cite: 276]</li>
-            </ul>
-
-            <div class="photo-grid" style="margin-top: 15px;">
-                <div class="photo-item">
-                    <img src="honor_y_gloria/caidos.jpg" alt="Nómina de Caídos - Honor y Gloria">
-                    <div class="photo-caption">Nómina oficial de los 649 Héroes Nacionales</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Trabajos de Investigación -->
-        <div class="section-card">
-            <h2>Trabajos de Investigación</h2>
-            <p>Documentos y análisis detallados sobre las operaciones, el despliegue y la historia táctica de la Fuerza Aérea Sur.</p>
+        <!-- 2. Honor y Gloria -->
+        <section class="section-card">
+            <h2>2. Honor y Gloria</h2>
+            <p>Homenaje permanente a los 649 Héroes Nacionales (Ley N.º 24.950).</p>
             <ul>
-                <li>📂 <a class="file-link" href="trabajos_investigacion/analisis_tactico_operativo.pdf" target="_blank">Análisis Táctico Operativo de la FAS</a></li>
-                <li>📂 <a class="file-link" href="trabajos_investigacion/documento_historico_malvinas.pdf" target="_blank">Documento Histórico y Estratégico</a></li>
+                <li><a href="honor_y_gloria/los_649_heroes_nacionales.pdf" target="_blank">Nómina oficial de los 649 Héroes Nacionales (PDF)</a></li>
+                <li><a href="honor_y_gloria/caidos_homenaje.jpg" target="_blank">Imagen conmemorativa de los caídos</a></li>
             </ul>
-        </div>
+        </section>
 
-        <!-- Antecedentes y Documentos PDF -->
-        <div class="section-card">
-            <h2>Antecedentes y Documentos Históricos (PDF)</h2>
+        <!-- 3. Fotografías -->
+        <section class="section-card">
+            <h2>3. Fotografías</h2>
+            <p>Directorio visual optimizado (operaciones, bases, personal técnico y material histórico).</p>
+            <p><a href="fotografias/">Ver galería fotográfica completa</a></p>
+        </section>
+
+        <!-- 4. Trabajos de Investigación -->
+        <section class="section-card">
+            <h2>4. Trabajos de Investigación</h2>
             <ul>
-                <li>📄 <a class="file-link" href="antecedentes_fas/Autonomia_y_Tension_Interfuerzas.pdf" target="_blank">Autonomía y Tensión Interfuerzas</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/Biografia_Crespo_y_Fuerza_Aerea_Sur.pdf" target="_blank">Biografía del Brigadier Crespo y Fuerza Aérea Sur</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/Dossier_Tactico_FAS_1982.pdf" target="_blank">Dossier Táctico FAS 1982</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/FAA_Declaracion_Crespo_Panorama.pdf" target="_blank">Declaración de Crespo y Panorama</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/FAS_Comando_Independiente.pdf" target="_blank">FAS: Comando Independiente</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/Fuerza_Aerea_Sur_Dist_Medios.pdf" target="_blank">Distribución de Medios de la Fuerza Aérea Sur</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/Informe_Analisis_Estrategico_FAS.pdf" target="_blank">Informe de Análisis Estratégico FAS</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/Informe_Tecnico_Trilogia_Operativa.pdf" target="_blank">Informe Técnico de la Trilogía Operativa</a></li>
-                <li>📄 <a class="file-link" href="antecedentes_fas/La_Fuerza_Aerea_Sur.pdf" target="_blank">La Fuerza Aérea Sur</a></li>
+                <li><a href="trabajos_investigacion/Analisis_Juridico_Estatus_Veteranos_FAA.pdf" target="_blank">Análisis Jurídico del Estatus de Veteranos FAA</a></li>
+                <li><a href="trabajos_investigacion/FAS_Todos_Fuimos_Uno.pdf" target="_blank">FAS: Todos Fuimos Uno</a></li>
+                <li><a href="trabajos_investigacion/heroes_cielo_y_tierra_fas.pdf" target="_blank">Héroes del Cielo y de la Tierra - Cuadernillo Secundario FAS</a></li>
+                <li><a href="trabajos_investigacion/Ley_23118_y_Resoluciones_FAA.pdf" target="_blank">Ley 23.118 y Resoluciones FAA</a></li>
+                <li><a href="trabajos_investigacion/Analisis_Fallo_Contreras_y_Aporte_Testigo.pdf" target="_blank">Análisis Fallo Contreras y Aporte Testigo</a></li>
             </ul>
-        </div>
+        </section>
 
-        <!-- Dossier Educativo y Divulgación Escolar -->
-        <div class="section-card">
-            <h2>Dossier Educativo - Malvinas en las Aulas</h2>
-            <p>Material pedagógico, guías de investigación y divulgación para escuelas primarias y secundarias[cite: 224, 249].</p>
+        <!-- 5. Mi Libro (Testimonio de una Trilogía) -->
+        <section class="section-card">
+            <h2>5. Mi Libro: Testimonio de una Trilogía</h2>
+            <p>Documentación de la operatividad del personal de tierra junto a las aeronaves y pilotos en 1982.</p>
             <ul>
-                <li>📚 <a class="file-link" href="La_Gesta_de_Malvinas_en_las_Aulas.pdf" target="_blank">La Gesta de Malvinas en las Aulas (Nivel Secundario)[cite: 224]</a></li>
-                <li>📚 <a class="file-link" href="Malvinas_tambien_se_ensena.pdf" target="_blank">Malvinas también se enseña (Nivel Primario)[cite: 249]</a></li>
-                <li>📚 <a class="file-link" href="ilustracion_para_chicos.pdf" target="_blank">Ilustraciones y Material Didáctico[cite: 208]</a></li>
+                <li><a href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank">Leer libro completo (PDF)</a></li>
             </ul>
-        </div>
+        </section>
 
-        <!-- Galería Fotográfica e Imágenes Históricas -->
-        <div class="section-card">
-            <h2>Galería Fotográfica e Imágenes Históricas</h2>
-            <p>Registros fotográficos, afiches de la Trilogía y documentos originales de la BAM San Julián.</p>
-            <div class="photo-grid">
-                <div class="photo-item">
-                    <img src="fotografias/64A53572-4CBF-4F0B-8265-7400D61578A1_2.jpg" alt="Afiche Trilogía">
-                    <div class="photo-caption">Afiche: Sin el personal de tierra...</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/pilotos.png" alt="Pilotos y Dagger">
-                    <div class="photo-caption">Pilotos junto al Sistema Dagger</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/san julian piloto.jpg" alt="BAM San Julián">
-                    <div class="photo-caption">Plataforma en BAM San Julián (C-432)</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/c432 1 mayo sjl.png" alt="C-432 1 de Mayo">
-                    <div class="photo-caption">Alistamiento del C-432 (1 de Mayo)</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/alistando el c-421.jpg" alt="Alistando el C-421">
-                    <div class="photo-caption">Trabajos técnicos en el C-421</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/Acta Puerto San.jpg" alt="Acta Puerto San Julián">
-                    <div class="photo-caption">Acta Oficial - Material en San Julián</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/13445492_1133132763374623_7180380190830583220_n - Copy.jpg" alt="Personal de la Base">
-                    <div class="photo-caption">Personal desplegado en la Base</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/Un-Caza-Dassault-Mirage-IIIEA-C-432-en-el-Museo-Nacional-de-Aeronautica-utilizado-durante-la-Guerra-de-Malvinas-1024x576.jpg" alt="C-432 Museo">
-                    <div class="photo-caption">C-432 preservado en el Museo</div>
-                </div>
-                <div class="photo-item">
-                    <img src="fotografias/62c20540-a004-4a9f-bfc4-31b791881b25.jpg" alt="C-408">
-                    <div class="photo-caption">Avión Dagger matrícula C-408</div>
-                </div>
-            </div>
-        </div>
+        <!-- 6. Videos -->
+        <section class="section-card">
+            <h2>6. Videos</h2>
+            <p>Material audiovisual histórico y documental de la Fuerza Aérea Sur.</p>
+            <p><a href="videos/">Acceder al repositorio de videos</a></p>
+        </section>
 
-        <!-- Material Audiovisual (YouTube) -->
-        <div class="section-card">
-            <h2>Material Audiovisual y Documentales</h2>
-            
-            <h3>La Trilogía Operativa para Chicos</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/HI6wUWwzvJg" title="La Trilogía Operativa para chicos" allowfullscreen></iframe>
-            </div>
+        <!-- 7. Dossier Chicos -->
+        <section class="section-card">
+            <h2>7. Dossier Chicos</h2>
+            <p>Material didáctico y educativo especialmente diseñado para que las nuevas generaciones conozcan la historia.</p>
+            <p><a href="dossier_chicos/">Acceder al material educativo</a></p>
+        </section>
 
-            <h3 style="margin-top: 25px;">Video Educativo / Dossier</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/ad0rOnO_lNU" title="Video Dossier Chicos" allowfullscreen></iframe>
-            </div>
-
-            <h3 style="margin-top: 25px;">La Verdad Incómoda</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/GIIpj5ACPLQ" title="La Verdad Incómoda" allowfullscreen></iframe>
-            </div>
-
-            <h3 style="margin-top: 25px;">Reportaje JLM</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/bY2Y_nHuELk" title="Reportaje JLM" allowfullscreen></iframe>
-            </div>
-
-            <h3 style="margin-top: 25px;">San Julián 2022</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/n_0dnGBC1DM" title="San Julián 2022" allowfullscreen></iframe>
-            </div>
-
-            <h3 style="margin-top: 25px;">La Trilogía</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/mSVf-R-yF7Q" title="La Trilogía" allowfullscreen></iframe>
-            </div>
-
-            <h3 style="margin-top: 25px;">Audio Análisis - Fuerza Aérea Sur 1982</h3>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/3nFEBN_X_cc" title="Audio Análisis FAS 1982" allowfullscreen></iframe>
-            </div>
-
-            <h3 style="margin-top: 25px;">FAS 1982 (Short)</h3>
-            <div class="short-container">
-                <iframe src="https://www.youtube.com/embed/BtqFyEcm974" title="FAS 1982 Short" allowfullscreen></iframe>
-            </div>
-
-            <h3 style="margin-top: 25px;">FAS Combate (Short)</h3>
-            <div class="short-container">
-                <iframe src="https://www.youtube.com/embed/3W4lOURrdkE" title="FAS Combate Short" allowfullscreen></iframe>
-            </div>
-        </div>
-
-    </div>
+    </main>
 
     <footer>
-        <p>&copy; Fuerza Aérea Sur - Todos los derechos reservados | Pers. Civil Tec. Prof. FAA VGM José Luis Martínez Eyheramendi</p>
+        <p>&copy; 1982 - 2026 Fuerza Aérea Sur | Homenaje Permanente a los Veteranos y Caídos en Malvinas.</p>
     </footer>
 
 </body>
