@@ -31,7 +31,7 @@
             background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
             color: white;
             text-align: center;
-            padding: 2.5rem 1rem 2rem 1rem;
+            padding: 3rem 1rem 2.5rem 1rem;
             border-bottom: 4px solid var(--accent-gold);
             box-shadow: 0 10px 25px rgba(0,0,0,0.6);
         }
@@ -41,7 +41,7 @@
         }
         .hero-banner {
             width: 100%;
-            max-width: 750px;
+            max-width: 700px;
             margin: 1.5rem auto;
             border-radius: 12px;
             overflow: hidden;
@@ -64,27 +64,29 @@
         }
         header h1 {
             margin: 0;
-            font-size: 2.4rem;
+            font-size: 2.5rem;
             letter-spacing: 1.5px;
             color: #ffffff;
             font-weight: 700;
         }
         header h2 {
-            margin: 0.4rem 0 0 0;
-            font-size: 1.15rem;
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
             color: var(--accent-gold);
             font-weight: 400;
             letter-spacing: 0.5px;
         }
+        
+        /* Contenedor Principal en Grid Simétrica */
         .container {
-            max-width: 1100px;
-            margin: 2.5rem auto;
+            max-width: 1200px;
+            margin: 3rem auto;
             padding: 0 1.5rem;
             display: grid;
             grid-template-columns: 1fr;
             gap: 2rem;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 900px) {
             .container {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -92,25 +94,29 @@
                 grid-column: span 2;
             }
         }
+
+        /* Tarjetas Armónicas y Simétricas */
         .section-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 12px;
-            padding: 2rem;
+            padding: 2.2rem;
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, border-color 0.3s ease;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            min-height: 480px; /* Asegura altura simétrica en pantallas grandes */
         }
         .section-card:hover {
-            transform: translateY(-4px);
+            transform: translateY(-5px);
             border-color: var(--accent-blue);
+            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
         }
         .section-card h2 {
             margin-top: 0;
             color: var(--accent-blue);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             border-bottom: 2px solid var(--card-border);
             padding-bottom: 0.75rem;
             margin-bottom: 1rem;
@@ -119,12 +125,15 @@
             color: var(--text-muted);
             font-size: 0.95rem;
             margin-bottom: 1.5rem;
+            flex-grow: 0;
         }
+
+        /* Listas de Enlaces Alineadas */
         .link-list {
             list-style: none;
             padding: 0;
             margin: 0;
-            max-height: 250px;
+            max-height: 260px;
             overflow-y: auto;
             padding-right: 5px;
         }
@@ -136,13 +145,13 @@
             border-radius: 4px;
         }
         .link-list li {
-            margin-bottom: 0.6rem;
+            margin-bottom: 0.7rem;
         }
         .link-list a {
             display: block;
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.7);
             color: #e2e8f0;
-            padding: 0.6rem 1rem;
+            padding: 0.65rem 1rem;
             border-radius: 6px;
             text-decoration: none;
             font-size: 0.9rem;
@@ -153,8 +162,10 @@
             background: rgba(56, 189, 248, 0.1);
             color: var(--accent-blue);
             border-color: var(--accent-blue);
-            padding-left: 1.25rem;
+            padding-left: 1.2rem;
         }
+
+        /* Cajas de Destacados */
         .highlight-box {
             background: rgba(251, 191, 36, 0.05);
             border-left: 4px solid var(--accent-gold);
@@ -165,14 +176,15 @@
         .highlight-box p {
             color: #fef3c7;
             margin: 0;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
+
         footer {
             text-align: center;
-            padding: 2.5rem 1rem;
+            padding: 3rem 1rem;
             background-color: #090d16;
             color: var(--text-muted);
-            margin-top: 4rem;
+            margin-top: 5rem;
             border-top: 1px solid var(--card-border);
             font-size: 0.9rem;
         }
@@ -192,7 +204,7 @@
                 </a>
             </div>
 
-            <p style="color: var(--text-muted); margin: 0;">Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
+            <p style="color: var(--text-muted); margin: 0; font-size: 1.05rem;">Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
         </div>
     </header>
 
@@ -221,7 +233,7 @@
         <section class="section-card">
             <div>
                 <h2>2. Honor y Gloria</h2>
-                <p>Homenaje permanente a los 649 Héroes Nacionales (Ley N.º 24.950).</p>
+                <p>Homenaje permanente a los 649 Héroes Nacionales de la Patria (Ley N.º 24.950).</p>
                 <ul class="link-list">
                     <li><a href="honor_y_gloria/los_649_heroes_nacionales.pdf" target="_blank">📜 Nómina oficial de los 649 Héroes (PDF)</a></li>
                     <li><a href="honor_y_gloria/caidos_homenaje.jpg" target="_blank">🖼 Imagen conmemorativa de los caídos</a></li>
@@ -230,23 +242,23 @@
         </section>
 
         <!-- 3. Fotografías, Emblemas y Legado Histórico -->
-        <section class="section-card full-width" style="background: linear-gradient(145deg, #1e293b, #111827); border-color: var(--accent-blue);">
+        <section class="section-card">
             <div>
-                <h2 style="color: var(--accent-blue);">3. Fotografías, Emblemas y Legado Histórico</h2>
-                <p>Archivo visual permanente con registros de operaciones en la Base Aérea Militar San Julián (1982), emblemas del escuadrón y encuentros de veteranos de la Fuerza Aérea Sur.</p>
+                <h2>3. Fotografías, Emblemas y Legado</h2>
+                <p>Archivo visual permanente con registros de operaciones en la BAM San Julián (1982), emblemas y encuentros de veteranos.</p>
                 
-                <div class="highlight-box" style="border-left-color: var(--accent-blue); background: rgba(56, 189, 248, 0.05);">
-                    <p style="color: #e0f2fe;">Accedé al repositorio visual completo alojado en la nube. El álbum se actualiza de manera permanente con nuevo material histórico y fotográfico.</p>
+                <div class="highlight-box" style="border-left-color: var(--accent-blue); background: rgba(56, 189, 248, 0.05); margin-bottom: 1rem;">
+                    <p style="color: #e0f2fe; font-size: 0.9rem;">Repositorio visual alojado en la nube con actualización permanente de nuevo material histórico.</p>
                 </div>
 
                 <ul class="link-list" style="max-height: none;">
                     <li>
-                        <a href="https://photos.google.com/u/1/album/AF1QipNdJmOJ368JXB8sPG77kLlPnSKvlXaSGax3IWr0" target="_blank" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); border-color: var(--accent-blue); font-weight: bold; text-align: center; padding: 0.9rem; margin-bottom: 0.6rem;">
-                            📷 II Escuadrón Aeromóvil Dagger - Fuerza Aérea Sur (1982-Presente)
+                        <a href="https://photos.google.com/u/1/album/AF1QipNdJmOJ368JXB8sPG77kLlPnSKvlXaSGax3IWr0" target="_blank" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); border-color: var(--accent-blue); font-weight: bold; text-align: center; padding: 0.75rem; margin-bottom: 0.5rem;">
+                            📷 II Escuadrón Aeromóvil Dagger - FAS (1982-Presente)
                         </a>
                     </li>
                     <li>
-                        <a href="https://photos.google.com/u/1/album/AF1QipML4PT5Yhjih4uQW6BxQMwsJ9GpQGmfszkMBpmP" target="_blank" style="background: rgba(15, 23, 42, 0.6); color: #e2e8f0; border: 1px solid var(--card-border); text-align: center; padding: 0.7rem;">
+                        <a href="https://photos.google.com/u/1/album/AF1QipML4PT5Yhjih4uQW6BxQMwsJ9GpQGmfszkMBpmP" target="_blank" style="background: rgba(15, 23, 42, 0.6); color: #e2e8f0; border: 1px solid var(--card-border); text-align: center; padding: 0.6rem;">
                             🏅 Emblemas y Distinciones
                         </a>
                     </li>
@@ -258,7 +270,7 @@
         <section class="section-card">
             <div>
                 <h2>4. Trabajos de Investigación</h2>
-                <p>Estudios y análisis especializados sobre la actuación táctica y jurídica del componente.</p>
+                <p>Estudios y análisis especializados sobre la actuación táctica y jurídica del componente en el conflicto.</p>
                 <ul class="link-list">
                     <li><a href="trabajos_investigacion/Analisis_Juridico_Estatus_Veteranos_FAA.pdf" target="_blank">📚 Análisis Jurídico Estatus Veteranos FAA</a></li>
                     <li><a href="trabajos_investigacion/FAS_Todos_Fuimos_Uno.pdf" target="_blank">📚 FAS: Todos Fuimos Uno</a></li>
@@ -269,8 +281,8 @@
             </div>
         </section>
 
-        <!-- 5. Mi Libro -->
-        <section class="section-card full-width" style="background: linear-gradient(145deg, #1e293b, #111827); border-color: var(--accent-gold);">
+        <!-- 5. Mi Libro (Ocupa ancho completo por ser la obra central) -->
+        <section class="section-card full-width" style="background: linear-gradient(145deg, #1e293b, #111827); border-color: var(--accent-gold); min-height: auto;">
             <div>
                 <h2 style="color: var(--accent-gold);">5. Mi Libro: Testimonio de una Trilogía</h2>
                 <p>Documentación profunda de la operatividad del personal de tierra junto a las aeronaves y pilotos en 1982.</p>
@@ -278,7 +290,7 @@
                     <p>Obra editada por la Escuela Superior de Guerra Aérea que relata el esfuerzo humano y técnico detrás de cada misión.</p>
                 </div>
                 <ul class="link-list" style="max-height: none;">
-                    <li><a href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank" style="background: rgba(251, 191, 36, 0.1); color: var(--accent-gold); border-color: var(--accent-gold); font-weight: bold; text-align: center;">📖 Leer libro completo en formato PDF (Edición Oficial)</a></li>
+                    <li><a href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank" style="background: rgba(251, 191, 36, 0.1); color: var(--accent-gold); border-color: var(--accent-gold); font-weight: bold; text-align: center; padding: 0.9rem;">📖 Leer libro completo en formato PDF (Edición Oficial)</a></li>
                 </ul>
             </div>
         </section>
