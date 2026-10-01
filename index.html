@@ -67,9 +67,19 @@
             text-decoration: underline;
             color: #90b8f8;
         }
+        .book-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .book-info {
+            flex: 1;
+        }
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 por defecto */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             border-radius: 4px;
@@ -84,12 +94,11 @@
             height: 100%;
             border: 0;
         }
-        /* Contenedor específico para YouTube Shorts (vertical) */
         .short-container {
             position: relative;
             max-width: 400px;
             margin: 10px auto;
-            padding-bottom: 177.78%; /* Relación 9:16 vertical */
+            padding-bottom: 177.78%;
             height: 0;
             overflow: hidden;
             border-radius: 4px;
@@ -102,6 +111,38 @@
             width: 100%;
             height: 100%;
             border: 0;
+        }
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .photo-item {
+            background: #252525;
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .photo-item img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+        .photo-caption {
+            padding: 10px;
+            font-size: 0.9em;
+            color: #ccc;
+            text-align: center;
+        }
+        .tribute-text {
+            background: #252525;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border-left: 3px solid #ffc107;
+            font-size: 0.95em;
         }
         footer {
             text-align: center;
@@ -122,7 +163,57 @@
 
     <div class="container">
 
-        <!-- Sección de Antecedentes y Documentos PDF -->
+        <!-- Obra Literaria e Histórica -->
+        <div class="section-card">
+            <h2>Obra Literaria e Histórica</h2>
+            <div class="book-box">
+                <div class="book-info">
+                    <h3 style="color: #ffffff; margin-top: 0;">Testimonio de una Trilogía – Guerra de Malvinas</h3>
+                    <p>Obra editada por la Escuela Superior de Guerra Aérea (ESGA) en conmemoración del 40° Aniversario de la Gesta de Malvinas[cite: 228]. Relata las vivencias del personal técnico y el rol fundamental de la Trilogía Operativa (Avión, Piloto y Personal de Tierra)[cite: 228].</p>
+                    <ul>
+                        <li>📖 <a class="file-link" href="libro_trilogia/Testimonio_de_una_Trilogia_Guerra_de_Malvinas.pdf" target="_blank">Leer / Descargar Libro Completo (PDF)</a></li>
+                        <li>🔗 <a class="file-link" href="https://cefadigital.edu.ar/bitstream/1847939/2445/1/TESTIMONIO%20DE%20UNA%20TRILOG%c3%8dA-%20Guerra%20de%20Malvinas.pdf" target="_blank">Consulta en CEFADIGITAL[cite: 228]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Honor y Gloria -->
+        <div class="section-card">
+            <h2>Honor y Gloria a Nuestros Héroes</h2>
+            <p>Homenaje permanente a los caídos en defensa de la Patria y registros especiales de la memoria histórica[cite: 275].</p>
+            
+            <div class="tribute-text">
+                <p><strong>"Las Malvinas fueron, son y serán argentinas"</strong>[cite: 275].</p>
+                <p>Hablar de Malvinas es hablar de personas. De hombres que tuvieron un nombre, una familia, una historia, sueños y proyectos de vida, y de 649 argentinos que nunca regresaron[cite: 276].</p>
+                <p>El Congreso de la Nación, mediante la <strong>Ley Nacional N.º 24.950</strong> (sancionada el 18 de marzo de 1998), declaró "Héroes nacionales" a los combatientes argentinos fallecidos durante la guerra de Malvinas de 1982[cite: 276]. Su artículo 2.º incorpora la nómina oficial para que sus nombres perduren en la memoria y conciencia histórica de las generaciones venideras[cite: 276].</p>
+                <p style="margin-bottom: 0;"><em>Este espacio no es solamente para recordar; es para conocer sus nombres, sus historias y asegurar que sigan siempre vivos en nuestra memoria[cite: 276, 277].</em></p>
+            </div>
+
+            <ul style="margin-top: 15px;">
+                <li>🎖️ <a class="file-link" href="honor_y_gloria/los_649_heroes_nacionales.pdf" target="_blank">Ver Dossier Completo: Los 649 Héroes Nacionales (PDF)</a>[cite: 275]</li>
+                <li>🔗 <a class="file-link" href="https://www.argentina.gob.ar/normativa/nacional/ley-24950-50278/texto" target="_blank">Texto oficial de la Ley Nacional 24.950 (Argentina.gob.ar)</a>[cite: 276]</li>
+            </ul>
+
+            <div class="photo-grid" style="margin-top: 15px;">
+                <div class="photo-item">
+                    <img src="honor_y_gloria/caidos.jpg" alt="Nómina de Caídos - Honor y Gloria">
+                    <div class="photo-caption">Nómina oficial de los 649 Héroes Nacionales</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trabajos de Investigación -->
+        <div class="section-card">
+            <h2>Trabajos de Investigación</h2>
+            <p>Documentos y análisis detallados sobre las operaciones, el despliegue y la historia táctica de la Fuerza Aérea Sur.</p>
+            <ul>
+                <li>📂 <a class="file-link" href="trabajos_investigacion/analisis_tactico_operativo.pdf" target="_blank">Análisis Táctico Operativo de la FAS</a></li>
+                <li>📂 <a class="file-link" href="trabajos_investigacion/documento_historico_malvinas.pdf" target="_blank">Documento Histórico y Estratégico</a></li>
+            </ul>
+        </div>
+
+        <!-- Antecedentes y Documentos PDF -->
         <div class="section-card">
             <h2>Antecedentes y Documentos Históricos (PDF)</h2>
             <ul>
@@ -138,18 +229,62 @@
             </ul>
         </div>
 
-        <!-- Sección de Dossier Educativo y Divulgación Escolar -->
+        <!-- Dossier Educativo y Divulgación Escolar -->
         <div class="section-card">
             <h2>Dossier Educativo - Malvinas en las Aulas</h2>
             <p>Material pedagógico, guías de investigación y divulgación para escuelas primarias y secundarias[cite: 224, 249].</p>
             <ul>
-                <li>📚 <a class="file-link" href="La_Gesta_de_Malvinas_en_las_Aulas.pdf" target="_blank">La Gesta de Malvinas en las Aulas (Nivel Secundario)</a>[cite: 224]</li>
-                <li>📚 <a class="file-link" href="Malvinas_tambien_se_ensena.pdf" target="_blank">Malvinas también se enseña (Nivel Primario)</a>[cite: 249]</li>
-                <li>📚 <a class="file-link" href="ilustracion_para_chicos.pdf" target="_blank">Ilustraciones y Material Didáctico</a>[cite: 208]</li>
+                <li>📚 <a class="file-link" href="La_Gesta_de_Malvinas_en_las_Aulas.pdf" target="_blank">La Gesta de Malvinas en las Aulas (Nivel Secundario)[cite: 224]</a></li>
+                <li>📚 <a class="file-link" href="Malvinas_tambien_se_ensena.pdf" target="_blank">Malvinas también se enseña (Nivel Primario)[cite: 249]</a></li>
+                <li>📚 <a class="file-link" href="ilustracion_para_chicos.pdf" target="_blank">Ilustraciones y Material Didáctico[cite: 208]</a></li>
             </ul>
         </div>
 
-        <!-- Sección de Material Audiovisual (YouTube) -->
+        <!-- Galería Fotográfica e Imágenes Históricas -->
+        <div class="section-card">
+            <h2>Galería Fotográfica e Imágenes Históricas</h2>
+            <p>Registros fotográficos, afiches de la Trilogía y documentos originales de la BAM San Julián.</p>
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="fotografias/64A53572-4CBF-4F0B-8265-7400D61578A1_2.jpg" alt="Afiche Trilogía">
+                    <div class="photo-caption">Afiche: Sin el personal de tierra...</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/pilotos.png" alt="Pilotos y Dagger">
+                    <div class="photo-caption">Pilotos junto al Sistema Dagger</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/san julian piloto.jpg" alt="BAM San Julián">
+                    <div class="photo-caption">Plataforma en BAM San Julián (C-432)</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/c432 1 mayo sjl.png" alt="C-432 1 de Mayo">
+                    <div class="photo-caption">Alistamiento del C-432 (1 de Mayo)</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/alistando el c-421.jpg" alt="Alistando el C-421">
+                    <div class="photo-caption">Trabajos técnicos en el C-421</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/Acta Puerto San.jpg" alt="Acta Puerto San Julián">
+                    <div class="photo-caption">Acta Oficial - Material en San Julián</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/13445492_1133132763374623_7180380190830583220_n - Copy.jpg" alt="Personal de la Base">
+                    <div class="photo-caption">Personal desplegado en la Base</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/Un-Caza-Dassault-Mirage-IIIEA-C-432-en-el-Museo-Nacional-de-Aeronautica-utilizado-durante-la-Guerra-de-Malvinas-1024x576.jpg" alt="C-432 Museo">
+                    <div class="photo-caption">C-432 preservado en el Museo</div>
+                </div>
+                <div class="photo-item">
+                    <img src="fotografias/62c20540-a004-4a9f-bfc4-31b791881b25.jpg" alt="C-408">
+                    <div class="photo-caption">Avión Dagger matrícula C-408</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Material Audiovisual (YouTube) -->
         <div class="section-card">
             <h2>Material Audiovisual y Documentales</h2>
             
@@ -202,7 +337,7 @@
     </div>
 
     <footer>
-        <p>&copy; Fuerza Aérea Sur - Todos los derechos reservados</p>
+        <p>&copy; Fuerza Aérea Sur - Todos los derechos reservados | Pers. Civil Tec. Prof. FAA VGM José Luis Martínez Eyheramendi</p>
     </footer>
 
 </body>
