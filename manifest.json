@@ -1,0 +1,18 @@
+{
+    "name": "Fuerza Aérea Sur - Malvinas 1982",
+    "short_name": "FAS Malvinas",
+    "start_url": "/FAS_la_Trilogia_PROBADA_EN_COMBATE_/",
+    "scope": "/FAS_la_Trilogia_PROBADA_EN_COMBATE_/",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#090d16",
+    "description": "Memoria, Historia y Legado – Conflicto de Malvinas 1982",
+    "icons": [
+        {
+            "src": "fotografias/caratula_parches.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg",
+            "purpose": "any maskable"
+        }
+    ]
+}
