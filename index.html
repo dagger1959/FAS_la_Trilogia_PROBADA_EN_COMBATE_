@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuerza Aérea Sur - Malvinas 1982 | Historia y Legado</title>
+    <title>Fuerza Aérea Sur - Malvinas 1982 | II Escuadrón Aeromóvil M-5 Dagger</title>
     <style>
         :root {
             --bg-dark: #0f172a;
@@ -26,44 +26,54 @@
             line-height: 1.6;
         }
         header {
-            position: relative;
-            background: linear-gradient(rgba(9, 13, 22, 0.85), rgba(15, 23, 42, 0.90)), url('https://images.unsplash.com/photo-1517976487139-d04135e98583?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
             color: white;
             text-align: center;
-            padding: 5rem 1rem;
+            padding: 3rem 1rem 2rem 1rem;
             border-bottom: 4px solid var(--accent-gold);
             box-shadow: 0 10px 25px rgba(0,0,0,0.6);
         }
         .header-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
-        .header-badge {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            border: 2px solid var(--accent-gold);
+        /* Contenedor destacado para la obra artística de carátula */
+        .hero-banner {
+            width: 100%;
+            max-width: 800px;
+            margin: 1.5rem auto 1.5rem auto;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 3px solid var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+            background-color: #000;
+        }
+        .hero-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
             object-fit: cover;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            max-height: 450px;
         }
         header h1 {
             margin: 0;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             letter-spacing: 1.5px;
             color: #ffffff;
             font-weight: 700;
             text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
-        header p {
-            margin-top: 0.8rem;
-            font-size: 1.25rem;
+        header h2 {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
             color: var(--accent-gold);
             font-weight: 400;
             letter-spacing: 0.5px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+        }
+        header p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: var(--text-muted);
         }
         .container {
             max-width: 1100px;
@@ -171,9 +181,14 @@
 
     <header>
         <div class="header-content">
-            <!-- Emblema circular representativo -->
-            <img src="honor_y_gloria/caidos_homenaje.jpg" alt="Fuerza Aérea Sur" class="header-badge" onerror="this.style.display='none'">
             <h1>Fuerza Aérea Sur (FAS)</h1>
+            <h2>II Escuadrón Aeromóvil M-5 Dagger &bull; Base Aérea Militar San Julián</h2>
+            
+            <!-- Banner principal con la obra artística representativa -->
+            <div class="hero-banner">
+                <img src="fotografias/trilogia_accion.jpg" alt="II Escuadrón Aeromóvil M-5 Dagger - La Marinete" onerror="this.onerror=null; this.src='honor_y_gloria/caidos_homenaje.jpg';">
+            </div>
+
             <p>Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
         </div>
     </header>
