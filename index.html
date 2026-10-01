@@ -47,14 +47,61 @@
             border-bottom: 1px solid #333;
             padding-bottom: 8px;
         }
-        video, audio {
-            width: 100%;
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #2a2a2a;
+        }
+        ul li:last-child {
+            border-bottom: none;
+        }
+        a.file-link {
+            color: #74c0fc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a.file-link:hover {
+            text-decoration: underline;
+            color: #90b8f8;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Relación de aspecto 16:9 por defecto */
+            height: 0;
+            overflow: hidden;
             border-radius: 4px;
             margin-top: 10px;
             background: #000;
         }
-        audio {
-            height: 40px;
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        /* Contenedor específico para YouTube Shorts (vertical) */
+        .short-container {
+            position: relative;
+            max-width: 400px;
+            margin: 10px auto;
+            padding-bottom: 177.78%; /* Relación 9:16 vertical */
+            height: 0;
+            overflow: hidden;
+            border-radius: 4px;
+            background: #000;
+        }
+        .short-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
         }
         footer {
             text-align: center;
@@ -70,67 +117,86 @@
 
     <header>
         <h1>Fuerza Aérea Sur</h1>
-        <p class="subtitle">Trilogía Probada en Combate - Documentos y Archivos Históricos</p>
+        <p class="subtitle">Trilogía Probada en Combate - Archivos Históricos, Documentales y Educativos</p>
     </header>
 
     <div class="container">
 
-        <!-- Sección de Audio -->
+        <!-- Sección de Antecedentes y Documentos PDF -->
         <div class="section-card">
-            <h2>Registro de Audio</h2>
-            <audio controls>
-                <source src="audio.m4a" type="audio/mp4">
-                Tu navegador no soporta la reproducción de audio.
-            </audio>
+            <h2>Antecedentes y Documentos Históricos (PDF)</h2>
+            <ul>
+                <li>📄 <a class="file-link" href="antecedentes_fas/Autonomia_y_Tension_Interfuerzas.pdf" target="_blank">Autonomía y Tensión Interfuerzas</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/Biografia_Crespo_y_Fuerza_Aerea_Sur.pdf" target="_blank">Biografía del Brigadier Crespo y Fuerza Aérea Sur</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/Dossier_Tactico_FAS_1982.pdf" target="_blank">Dossier Táctico FAS 1982</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/FAA_Declaracion_Crespo_Panorama.pdf" target="_blank">Declaración de Crespo y Panorama</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/FAS_Comando_Independiente.pdf" target="_blank">FAS: Comando Independiente</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/Fuerza_Aerea_Sur_Dist_Medios.pdf" target="_blank">Distribución de Medios de la Fuerza Aérea Sur</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/Informe_Analisis_Estrategico_FAS.pdf" target="_blank">Informe de Análisis Estratégico FAS</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/Informe_Tecnico_Trilogia_Operativa.pdf" target="_blank">Informe Técnico de la Trilogía Operativa</a></li>
+                <li>📄 <a class="file-link" href="antecedentes_fas/La_Fuerza_Aerea_Sur.pdf" target="_blank">La Fuerza Aérea Sur</a></li>
+            </ul>
         </div>
 
-        <!-- Videos de la Trilogía y Combate -->
+        <!-- Sección de Dossier Educativo y Divulgación Escolar -->
         <div class="section-card">
-            <h2>FAS 1982</h2>
-            <video controls preload="metadata">
-                <source src="fas_1982.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
+            <h2>Dossier Educativo - Malvinas en las Aulas</h2>
+            <p>Material pedagógico, guías de investigación y divulgación para escuelas primarias y secundarias[cite: 224, 249].</p>
+            <ul>
+                <li>📚 <a class="file-link" href="La_Gesta_de_Malvinas_en_las_Aulas.pdf" target="_blank">La Gesta de Malvinas en las Aulas (Nivel Secundario)</a>[cite: 224]</li>
+                <li>📚 <a class="file-link" href="Malvinas_tambien_se_ensena.pdf" target="_blank">Malvinas también se enseña (Nivel Primario)</a>[cite: 249]</li>
+                <li>📚 <a class="file-link" href="ilustracion_para_chicos.pdf" target="_blank">Ilustraciones y Material Didáctico</a>[cite: 208]</li>
+            </ul>
         </div>
 
+        <!-- Sección de Material Audiovisual (YouTube) -->
         <div class="section-card">
-            <h2>FAS Combate</h2>
-            <video controls preload="metadata">
-                <source src="fas_combate.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-        </div>
+            <h2>Material Audiovisual y Documentales</h2>
+            
+            <h3>La Trilogía Operativa para Chicos</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/HI6wUWwzvJg" title="La Trilogía Operativa para chicos" allowfullscreen></iframe>
+            </div>
 
-        <div class="section-card">
-            <h2>La Trilogía</h2>
-            <video controls preload="metadata">
-                <source src="la_trilogia.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-        </div>
+            <h3 style="margin-top: 25px;">Video Educativo / Dossier</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ad0rOnO_lNU" title="Video Dossier Chicos" allowfullscreen></iframe>
+            </div>
 
-        <div class="section-card">
-            <h2>La Verdad Incómoda</h2>
-            <video controls preload="metadata">
-                <source src="la_verdad_incomoda.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-        </div>
+            <h3 style="margin-top: 25px;">La Verdad Incómoda</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/GIIpj5ACPLQ" title="La Verdad Incómoda" allowfullscreen></iframe>
+            </div>
 
-        <div class="section-card">
-            <h2>Reportaje JLM</h2>
-            <video controls preload="metadata">
-                <source src="reportaje_jlm.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
-        </div>
+            <h3 style="margin-top: 25px;">Reportaje JLM</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/bY2Y_nHuELk" title="Reportaje JLM" allowfullscreen></iframe>
+            </div>
 
-        <div class="section-card">
-            <h2>San Julián 2022</h2>
-            <video controls preload="metadata">
-                <source src="san_julian_2022.mp4" type="video/mp4">
-                Tu navegador no soporta la reproducción de video.
-            </video>
+            <h3 style="margin-top: 25px;">San Julián 2022</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/n_0dnGBC1DM" title="San Julián 2022" allowfullscreen></iframe>
+            </div>
+
+            <h3 style="margin-top: 25px;">La Trilogía</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/mSVf-R-yF7Q" title="La Trilogía" allowfullscreen></iframe>
+            </div>
+
+            <h3 style="margin-top: 25px;">Audio Análisis - Fuerza Aérea Sur 1982</h3>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/3nFEBN_X_cc" title="Audio Análisis FAS 1982" allowfullscreen></iframe>
+            </div>
+
+            <h3 style="margin-top: 25px;">FAS 1982 (Short)</h3>
+            <div class="short-container">
+                <iframe src="https://www.youtube.com/embed/BtqFyEcm974" title="FAS 1982 Short" allowfullscreen></iframe>
+            </div>
+
+            <h3 style="margin-top: 25px;">FAS Combate (Short)</h3>
+            <div class="short-container">
+                <iframe src="https://www.youtube.com/embed/3W4lOURrdkE" title="FAS Combate Short" allowfullscreen></iframe>
+            </div>
         </div>
 
     </div>
