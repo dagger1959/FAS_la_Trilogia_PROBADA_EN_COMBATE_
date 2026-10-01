@@ -26,26 +26,44 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
+            position: relative;
+            background: linear-gradient(rgba(9, 13, 22, 0.85), rgba(15, 23, 42, 0.90)), url('https://images.unsplash.com/photo-1517976487139-d04135e98583?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
             text-align: center;
-            padding: 3.5rem 1rem;
-            border-bottom: 3px solid var(--accent-gold);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            padding: 5rem 1rem;
+            border-bottom: 4px solid var(--accent-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header-badge {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-gold);
+            object-fit: cover;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
         header h1 {
             margin: 0;
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             letter-spacing: 1.5px;
             color: #ffffff;
             font-weight: 700;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
         header p {
             margin-top: 0.8rem;
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             color: var(--accent-gold);
-            font-weight: 300;
+            font-weight: 400;
             letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.8);
         }
         .container {
             max-width: 1100px;
@@ -152,8 +170,12 @@
 <body>
 
     <header>
-        <h1>Fuerza Aérea Sur (FAS)</h1>
-        <p>Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
+        <div class="header-content">
+            <!-- Emblema circular representativo -->
+            <img src="honor_y_gloria/caidos_homenaje.jpg" alt="Fuerza Aérea Sur" class="header-badge" onerror="this.style.display='none'">
+            <h1>Fuerza Aérea Sur (FAS)</h1>
+            <p>Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
+        </div>
     </header>
 
     <main class="container">
@@ -172,7 +194,7 @@
                     <li><a href="antecedentes_fas/Fuerza_Aerea_Sur_Dist_Medios.pdf" target="_blank">📄 Fuerza Aérea Sur - Distribución de Medios (PDF)</a></li>
                     <li><a href="antecedentes_fas/Informe_Analisis_Estrategico.pdf" target="_blank">📄 Informe de Análisis Estratégico (PDF)</a></li>
                     <li><a href="antecedentes_fas/Informe_Tecnico_Trilogia_Operativa.pdf" target="_blank">📄 Informe Técnico - Trilogía Operativa (PDF)</a></li>
-                    <li><a href="antecedentes_fas/La_Fuerza_Aerea_Sur.pdf" target="_blank">📄 La Fuerza Aérea Sur (PDF)</a></li>
+                    <li><a href="antecedentes_fas/La_Fuerza_A_Sur.pdf" target="_blank">📄 La Fuerza Aérea Sur (PDF)</a></li>
                 </ul>
             </div>
         </section>
