@@ -49,10 +49,18 @@
             box-shadow: 0 12px 35px rgba(0,0,0,0.8);
             background-color: #000;
         }
+        .hero-banner a {
+            display: block;
+            text-decoration: none;
+        }
         .hero-banner img {
             width: 100%;
             height: auto;
             display: block;
+            transition: transform 0.3s ease;
+        }
+        .hero-banner img:hover {
+            transform: scale(1.02);
         }
         header h1 {
             margin: 0;
@@ -177,9 +185,11 @@
             <h1>Fuerza Aérea Sur (FAS)</h1>
             <h2>II Escuadrón Aeromóvil M-5 Dagger &bull; Base Aérea Militar San Julián</h2>
             
-            <!-- Carátula principal -->
+            <!-- Carátula principal con enlace a Google Fotos -->
             <div class="hero-banner">
-                <img src="fotografias/caratula_parches.jpg" alt="Testimonio de una trilogía - VGM José Luis Martínez">
+                <a href="https://photos.google.com/u/1/album/AF1QipN12b_IXLsqjkR2UfbT6r0131Vh26LBWitfK_RO" target="_blank" title="Ver carátula y álbum principal en Google Fotos">
+                    <img src="fotografias/caratula_parches.jpg" alt="Testimonio de una trilogía - VGM José Luis Martínez">
+                </a>
             </div>
 
             <p style="color: var(--text-muted); margin: 0;">Memoria, Historia y Legado – Conflicto de Malvinas 1982</p>
@@ -219,16 +229,22 @@
             </div>
         </section>
 
-        <!-- 3. Fotografías -->
-        <section class="section-card">
+        <!-- 3. Fotografías, Emblemas y Legado Histórico -->
+        <section class="section-card full-width" style="background: linear-gradient(145deg, #1e293b, #111827); border-color: var(--accent-blue);">
             <div>
-                <h2>3. Fotografías</h2>
-                <p>Directorio visual optimizado con elementos normalizados (operaciones, bases y personal técnico).</p>
-                <ul class="link-list">
-                    <li><a href="fotografias/dagger_5.jpg" target="_blank">📷 Dagger 5 en Base San Julián</a></li>
-                    <li><a href="fotografias/los_magos.jpg" target="_blank">📷 Personal Técnico - Los Magos</a></li>
-                    <li><a href="fotografias/refugio.jpg" target="_blank">📷 Refugio y Personal</a></li>
-                    <li><a href="fotografias/trilogia_accion.jpg" target="_blank">📷 Trilogía en Acción</a></li>
+                <h2 style="color: var(--accent-blue);">3. Fotografías, Emblemas y Legado Histórico</h2>
+                <p>Archivo visual permanente con registros de operaciones en la Base Aérea Militar San Julián (1982), emblemas del escuadrón y encuentros de veteranos de la Fuerza Aérea Sur.</p>
+                
+                <div class="highlight-box" style="border-left-color: var(--accent-blue); background: rgba(56, 189, 248, 0.05);">
+                    <p style="color: #e0f2fe;">Accedé al repositorio visual completo alojado en la nube. El álbum se actualiza de manera permanente con nuevo material histórico y fotográfico.</p>
+                </div>
+
+                <ul class="link-list" style="max-height: none;">
+                    <li>
+                        <a href="https://photos.google.com/u/1/album/AF1QipML4PT5Yhjih4uQW6BxQMwsJ9GpQGmfszkMBpmP" target="_blank" style="background: rgba(56, 189, 248, 0.15); color: var(--accent-blue); border-color: var(--accent-blue); font-weight: bold; text-align: center; padding: 0.9rem;">
+                            📷 Ver Álbum Completo de Fotografías Históricas y Emblemas (Google Fotos)
+                        </a>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -287,13 +303,13 @@
                 <h2>7. Dossier Chicos</h2>
                 <p>Material didáctico y educativo especialmente diseñado para que las nuevas generaciones conozcan la historia.</p>
                 <ul class="link-list">
-                    <li><a href="dossier_chicos/diapositivas_malvinas.pdf" target="_blank">🎒 Diapositivas Malvinas (PDF)</a></li>
-                    <li><a href="dossier_chicos/ilustracion_para_chicos.pdf" target="_blank">🎒 Ilustración para Chicos (PDF)</a></li>
-                    <li><a href="dossier_chicos/gesta_malvinas_aulas.pdf" target="_blank">🎒 La Gesta de Malvinas en las Aulas (PDF)</a></li>
-                    <li><a href="dossier_chicos/malvinas_dagger_trilogia.pdf" target="_blank">🎒 Malvinas Dagger Trilogía (PDF)</a></li>
-                    <li><a href="dossier_chicos/malvinas_tambien_se_ensena.pdf" target="_blank">🎒 Malvinas También se Enseña (PDF)</a></li>
-                    <li><a href="dossier_chicos/recopilado_didactico.pdf" target="_blank">🎒 Recopilado Didáctico (PDF)</a></li>
-                    <li><a href="dossier_chicos/trilogia_operativa_chicos.mp4" target="_blank">🎒 La Trilogía Operativa para Chicos (Video)</a></li>
+                    <li><a href="dossier_chicos/diapositivas-malvinas.pdf" target="_blank">🎒 Diapositivas Malvinas (PDF)</a></li>
+                    <li><a href="dossier_chicos/ilustracion_para_chicos%20.pdf" target="_blank">🎒 Ilustración para Chicos (PDF)</a></li>
+                    <li><a href="dossier_chicos/La_Gesta_de_Malvinas_en_las_Aulas%20.pdf" target="_blank">🎒 La Gesta de Malvinas en las Aulas (PDF)</a></li>
+                    <li><a href="dossier_chicos/Malvinas_Dagger_Trilogia.pdf" target="_blank">🎒 Malvinas Dagger Trilogía (PDF)</a></li>
+                    <li><a href="dossier_chicos/Malvinas_tambien_se_ensena%20%281%29.pdf" target="_blank">🎒 Malvinas También se Enseña (PDF)</a></li>
+                    <li><a href="dossier_chicos/recopilado%20para%20comprender%20como%20funci....pdf" target="_blank">🎒 Recopilado Didáctico (PDF)</a></li>
+                    <li><a href="dossier_chicos/La_Trilog%C3%ADa_Operativa%20para%20chicos..mp4" target="_blank">🎒 La Trilogía Operativa para Chicos (Video)</a></li>
                     <li><a href="dossier_chicos/video_chicos.mp4" target="_blank">🎒 Video Educativo para Chicos (Video)</a></li>
                 </ul>
             </div>
