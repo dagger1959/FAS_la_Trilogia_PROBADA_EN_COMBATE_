@@ -34,7 +34,6 @@
             margin: 0 auto;
         }
 
-        /* Encabezado y Carátula */
         header {
             text-align: center;
             margin-bottom: 2.5rem;
@@ -91,7 +90,6 @@
             font-size: 1rem;
         }
 
-        /* Grilla de Secciones */
         .grid-sections {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -147,7 +145,6 @@
             opacity: 0.9;
         }
 
-        /* Formulario de Comentarios */
         .comment-form {
             display: flex;
             flex-direction: column;
@@ -178,7 +175,6 @@
             min-height: 90px;
         }
 
-        /* Tarjeta PWA */
         .pwa-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -203,7 +199,6 @@
             color: var(--text-muted);
         }
 
-        /* Footer */
         footer {
             text-align: center;
             padding: 2rem 1rem;
@@ -225,7 +220,6 @@
 <body>
 
     <div class="container">
-        <!-- Encabezado Principal -->
         <header>
             <h1>Fuerza Aérea Sur</h1>
             <p>II Escuadrón Aeromóvil M-5 Dagger &bull; Operaciones y Testimonios de Malvinas</p>
@@ -241,7 +235,6 @@
             </a>
         </div>
 
-        <!-- Grilla de Contenidos -->
         <div class="grid-sections">
             
             <!-- 1. La Trilogía (Libro) -->
@@ -278,290 +271,6 @@
                     <p>Comparte tu recuerdo, consulta o mensaje de reconocimiento para los veteranos de Malvinas.</p>
                     
                     <form action="https://formspree.io/f/tu-codigo-de-formulario" method="POST" class="comment-form">
-                        <div class="form-group">
-                            <label for="nombre">Tu Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico:</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div classDisculpame por el inconveniente. Vamos sobre seguro: aquí tenés **exactamente la versión anterior limpia, completa y sin alteraciones**, con todas sus secciones originales y enlaces intactos para que tu sitio vuelva a funcionar perfecto en cuestión de segundos:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fuerza Aérea Sur - La Trilogía y Operaciones Malvinas</title>
-    <style>
-        :root {
-            --bg-dark: #090d16;
-            --card-bg: #111827;
-            --card-border: #1f293d;
-            --accent-blue: #38bdf8;
-            --accent-gold: #f59e0b;
-            --text-main: #f3f4f6;
-            --text-muted: #9ca3af;
-        }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 1.5rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 2.5rem;
-        }
-
-        header h1 {
-            font-size: clamp(1.8rem, 3vw, 2.6rem);
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-        }
-
-        .caratula-container {
-            max-width: 900px;
-            margin: 0 auto 2.5rem auto;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 2px solid var(--card-border);
-            background: var(--card-bg);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .caratula-container:hover {
-            transform: scale(1.01);
-            border-color: var(--accent-blue);
-        }
-
-        .caratula-container a {
-            display: block;
-            text-decoration: none;
-        }
-
-        .caratula-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            max-height: 480px;
-            object-fit: cover;
-        }
-
-        .caratula-caption {
-            padding: 1rem;
-            text-align: center;
-            background: rgba(17, 24, 39, 0.95);
-            color: var(--accent-blue);
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .grid-sections {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .section-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 10px;
-            padding: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .section-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(56, 189, 248, 0.1);
-        }
-
-        .section-card.full-width {
-            grid-column: 1 / -1;
-        }
-
-        .section-card h2 {
-            font-size: 1.4rem;
-            color: var(--accent-blue);
-            margin-bottom: 0.8rem;
-        }
-
-        .section-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            margin-bottom: 1.2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent-blue);
-            color: #0f172a;
-            padding: 0.7rem 1.2rem;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            transition: background 0.2s, opacity 0.2s;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-        }
-
-        .comment-form {
-            display: flex;
-            flex-direction: column;
-            gap: 0.9rem;
-            margin-top: 1rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            margin-bottom: 0.3rem;
-        }
-
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 0.7rem;
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid var(--card-border);
-            border-radius: 6px;
-            color: #fff;
-            font-size: 0.9rem;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 90px;
-        }
-
-        .pwa-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .pwa-box {
-            background: rgba(15, 23, 42, 0.6);
-            padding: 1rem;
-            border-radius: 8px;
-            border: 1px solid var(--card-border);
-        }
-
-        .pwa-box strong {
-            color: var(--accent-gold);
-        }
-
-        .pwa-box p {
-            font-size: 0.85rem;
-            margin: 0.5rem 0 0 0;
-            color: var(--text-muted);
-        }
-
-        footer {
-            text-align: center;
-            padding: 2rem 1rem;
-            border-top: 1px solid var(--card-border);
-            margin-top: 3rem;
-            color: var(--text-muted);
-        }
-
-        footer a {
-            color: var(--accent-blue);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <header>
-            <h1>Fuerza Aérea Sur</h1>
-            <p>II Escuadrón Aeromóvil M-5 Dagger &bull; Operaciones y Testimonios de Malvinas</p>
-        </header>
-
-        <!-- Carátula Superior Enlazada a Google Fotos -->
-        <div class="caratula-container">
-            <a href="[https://photos.app.goo.gl/TU_ENLACE_DE_GOOGLE_FOTOS](https://photos.app.goo.gl/TU_ENLACE_DE_GOOGLE_FOTOS)" target="_blank" rel="noopener noreferrer" title="Hacer clic para ver el álbum de fotos completo">
-                <img src="fotografias/caratula_parches.jpg" alt="Carátula y Parches - Fuerza Aérea Sur">
-                <div class="caratula-caption">
-                    📸 Hacer clic aquí para ver el Álbum Fotográfico Completo en Google Fotos
-                </div>
-            </a>
-        </div>
-
-        <div class="grid-sections">
-            
-            <!-- 1. La Trilogía (Libro) -->
-            <section class="section-card">
-                <div>
-                    <h2>1. Testimonio de una Trilogía</h2>
-                    <p>Obra histórica que documenta el rol operativo del personal de mantenimiento terrestre junto a las aeronaves y pilotos durante el conflicto de 1982.</p>
-                </div>
-                <a href="#libro" class="btn">Acceder al Libro</a>
-            </section>
-
-            <!-- 2. Archivos Históricos y Dossiers -->
-            <section class="section-card">
-                <div>
-                    <h2>2. Archivos y Dossiers</h2>
-                    <p>Documentación técnica, partes de misión y material educativo exclusivo sobre el despliegue en la Base Aérea Militar San Julián.</p>
-                </div>
-                <a href="#dossiers" class="btn">Ver Documentación</a>
-            </section>
-
-            <!-- 3. Videos y Registros -->
-            <section class="section-card">
-                <div>
-                    <h2>3. Registros Audiovisuales</h2>
-                    <p>Selección de testimonios, secuencias históricas y materiales multimedia de la Fuerza Aérea Sur.</p>
-                </div>
-                <a href="#videos" class="btn">Ver Videos</a>
-            </section>
-
-            <!-- 4. Libro de Visitas y Comentarios -->
-            <section class="section-card">
-                <div>
-                    <h2>4. Dejanos tu Mensaje</h2>
-                    <p>Comparte tu recuerdo, consulta o mensaje de reconocimiento para los veteranos de Malvinas.</p>
-                    
-                    <form action="[https://formspree.io/f/tu-codigo-de-formulario](https://formspree.io/f/tu-codigo-de-formulario)" method="POST" class="comment-form">
                         <div class="form-group">
                             <label for="nombre">Tu Nombre:</label>
                             <input type="text" id="nombre" name="nombre" required>
